@@ -1,0 +1,756 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		184CD188F8A3EA43BDAE6FBB /* Pods_Mom_NoteUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88E6CB5C65E96AA51E3E94C1 /* Pods_Mom_NoteUITests.framework */; };
+		9D161497557595FE85137061 /* Pods_Mom_Note.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14070CE8AD271150B79F2BB0 /* Pods_Mom_Note.framework */; };
+		C516EEC621CCBE7A004DEAE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C516EEC521CCBE7A004DEAE2 /* AppDelegate.swift */; };
+		C516EEC821CCBE7A004DEAE2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C516EEC721CCBE7A004DEAE2 /* ViewController.swift */; };
+		C516EECB21CCBE7A004DEAE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C516EEC921CCBE7A004DEAE2 /* Main.storyboard */; };
+		C516EECD21CCBE7A004DEAE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C516EECC21CCBE7A004DEAE2 /* Assets.xcassets */; };
+		C516EED021CCBE7A004DEAE2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C516EECE21CCBE7A004DEAE2 /* LaunchScreen.storyboard */; };
+		C516EEDB21CCBE7B004DEAE2 /* Mom_NoteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C516EEDA21CCBE7B004DEAE2 /* Mom_NoteTests.swift */; };
+		C516EEE621CCBE7B004DEAE2 /* Mom_NoteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C516EEE521CCBE7B004DEAE2 /* Mom_NoteUITests.swift */; };
+		D4B09F00ACE5B6906552E8BE /* Pods_Mom_NoteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41C72EDE7E09D739FCCFFCCE /* Pods_Mom_NoteTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C516EED721CCBE7B004DEAE2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C516EEBA21CCBE7A004DEAE2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C516EEC121CCBE7A004DEAE2;
+			remoteInfo = "Mom-Note";
+		};
+		C516EEE221CCBE7B004DEAE2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C516EEBA21CCBE7A004DEAE2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C516EEC121CCBE7A004DEAE2;
+			remoteInfo = "Mom-Note";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		14070CE8AD271150B79F2BB0 /* Pods_Mom_Note.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mom_Note.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		186A7DAD6578D065F02EBC5B /* Pods-Mom-Note.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mom-Note.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mom-Note/Pods-Mom-Note.debug.xcconfig"; sourceTree = "<group>"; };
+		41C72EDE7E09D739FCCFFCCE /* Pods_Mom_NoteTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mom_NoteTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6CF063BF2F03B2CDC1C99334 /* Pods-Mom-NoteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mom-NoteTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mom-NoteTests/Pods-Mom-NoteTests.release.xcconfig"; sourceTree = "<group>"; };
+		88E6CB5C65E96AA51E3E94C1 /* Pods_Mom_NoteUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mom_NoteUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A601A868F216EAAAC9E6CBC6 /* Pods-Mom-NoteTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mom-NoteTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mom-NoteTests/Pods-Mom-NoteTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AE526026CBB7A4BD5DD25A84 /* Pods-Mom-Note.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mom-Note.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mom-Note/Pods-Mom-Note.release.xcconfig"; sourceTree = "<group>"; };
+		B62B9FD61FEC6231822779BF /* Pods-Mom-NoteUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mom-NoteUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mom-NoteUITests/Pods-Mom-NoteUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		C516EEC221CCBE7A004DEAE2 /* Mom-Note.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mom-Note.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C516EEC521CCBE7A004DEAE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C516EEC721CCBE7A004DEAE2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C516EECA21CCBE7A004DEAE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C516EECC21CCBE7A004DEAE2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C516EECF21CCBE7A004DEAE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C516EED121CCBE7A004DEAE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C516EED621CCBE7B004DEAE2 /* Mom-NoteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mom-NoteTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C516EEDA21CCBE7B004DEAE2 /* Mom_NoteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mom_NoteTests.swift; sourceTree = "<group>"; };
+		C516EEDC21CCBE7B004DEAE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C516EEE121CCBE7B004DEAE2 /* Mom-NoteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mom-NoteUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C516EEE521CCBE7B004DEAE2 /* Mom_NoteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mom_NoteUITests.swift; sourceTree = "<group>"; };
+		C516EEE721CCBE7B004DEAE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3CD2BB039A2D7C396F6D0C1 /* Pods-Mom-NoteUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mom-NoteUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mom-NoteUITests/Pods-Mom-NoteUITests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C516EEBF21CCBE7A004DEAE2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D161497557595FE85137061 /* Pods_Mom_Note.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C516EED321CCBE7B004DEAE2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4B09F00ACE5B6906552E8BE /* Pods_Mom_NoteTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C516EEDE21CCBE7B004DEAE2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				184CD188F8A3EA43BDAE6FBB /* Pods_Mom_NoteUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		01FCF85CA1BCDFE1F3179F44 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				186A7DAD6578D065F02EBC5B /* Pods-Mom-Note.debug.xcconfig */,
+				AE526026CBB7A4BD5DD25A84 /* Pods-Mom-Note.release.xcconfig */,
+				A601A868F216EAAAC9E6CBC6 /* Pods-Mom-NoteTests.debug.xcconfig */,
+				6CF063BF2F03B2CDC1C99334 /* Pods-Mom-NoteTests.release.xcconfig */,
+				B62B9FD61FEC6231822779BF /* Pods-Mom-NoteUITests.debug.xcconfig */,
+				D3CD2BB039A2D7C396F6D0C1 /* Pods-Mom-NoteUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		591CC1884B7B017A9E843792 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				14070CE8AD271150B79F2BB0 /* Pods_Mom_Note.framework */,
+				41C72EDE7E09D739FCCFFCCE /* Pods_Mom_NoteTests.framework */,
+				88E6CB5C65E96AA51E3E94C1 /* Pods_Mom_NoteUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C516EEB921CCBE7A004DEAE2 = {
+			isa = PBXGroup;
+			children = (
+				C516EEC421CCBE7A004DEAE2 /* Mom-Note */,
+				C516EED921CCBE7B004DEAE2 /* Mom-NoteTests */,
+				C516EEE421CCBE7B004DEAE2 /* Mom-NoteUITests */,
+				C516EEC321CCBE7A004DEAE2 /* Products */,
+				01FCF85CA1BCDFE1F3179F44 /* Pods */,
+				591CC1884B7B017A9E843792 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C516EEC321CCBE7A004DEAE2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C516EEC221CCBE7A004DEAE2 /* Mom-Note.app */,
+				C516EED621CCBE7B004DEAE2 /* Mom-NoteTests.xctest */,
+				C516EEE121CCBE7B004DEAE2 /* Mom-NoteUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C516EEC421CCBE7A004DEAE2 /* Mom-Note */ = {
+			isa = PBXGroup;
+			children = (
+				C516EEF421CCBF19004DEAE2 /* Common */,
+				C516EEF321CCBF06004DEAE2 /* Modules */,
+				C516EEF521CCBF20004DEAE2 /* Utils */,
+				C516EEC521CCBE7A004DEAE2 /* AppDelegate.swift */,
+				C516EEC721CCBE7A004DEAE2 /* ViewController.swift */,
+				C516EEC921CCBE7A004DEAE2 /* Main.storyboard */,
+				C516EECC21CCBE7A004DEAE2 /* Assets.xcassets */,
+				C516EECE21CCBE7A004DEAE2 /* LaunchScreen.storyboard */,
+				C516EED121CCBE7A004DEAE2 /* Info.plist */,
+			);
+			path = "Mom-Note";
+			sourceTree = "<group>";
+		};
+		C516EED921CCBE7B004DEAE2 /* Mom-NoteTests */ = {
+			isa = PBXGroup;
+			children = (
+				C516EEDA21CCBE7B004DEAE2 /* Mom_NoteTests.swift */,
+				C516EEDC21CCBE7B004DEAE2 /* Info.plist */,
+			);
+			path = "Mom-NoteTests";
+			sourceTree = "<group>";
+		};
+		C516EEE421CCBE7B004DEAE2 /* Mom-NoteUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C516EEE521CCBE7B004DEAE2 /* Mom_NoteUITests.swift */,
+				C516EEE721CCBE7B004DEAE2 /* Info.plist */,
+			);
+			path = "Mom-NoteUITests";
+			sourceTree = "<group>";
+		};
+		C516EEF321CCBF06004DEAE2 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		C516EEF421CCBF19004DEAE2 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		C516EEF521CCBF20004DEAE2 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C516EEC121CCBE7A004DEAE2 /* Mom-Note */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C516EEEA21CCBE7B004DEAE2 /* Build configuration list for PBXNativeTarget "Mom-Note" */;
+			buildPhases = (
+				375B12D616C650F66D794774 /* [CP] Check Pods Manifest.lock */,
+				C516EEBE21CCBE7A004DEAE2 /* Sources */,
+				C516EEBF21CCBE7A004DEAE2 /* Frameworks */,
+				C516EEC021CCBE7A004DEAE2 /* Resources */,
+				4C81E3044F93CEFACF56D561 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Mom-Note";
+			productName = "Mom-Note";
+			productReference = C516EEC221CCBE7A004DEAE2 /* Mom-Note.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C516EED521CCBE7B004DEAE2 /* Mom-NoteTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C516EEED21CCBE7B004DEAE2 /* Build configuration list for PBXNativeTarget "Mom-NoteTests" */;
+			buildPhases = (
+				04BCCC39C2059E1EB293B330 /* [CP] Check Pods Manifest.lock */,
+				C516EED221CCBE7B004DEAE2 /* Sources */,
+				C516EED321CCBE7B004DEAE2 /* Frameworks */,
+				C516EED421CCBE7B004DEAE2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C516EED821CCBE7B004DEAE2 /* PBXTargetDependency */,
+			);
+			name = "Mom-NoteTests";
+			productName = "Mom-NoteTests";
+			productReference = C516EED621CCBE7B004DEAE2 /* Mom-NoteTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C516EEE021CCBE7B004DEAE2 /* Mom-NoteUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C516EEF021CCBE7B004DEAE2 /* Build configuration list for PBXNativeTarget "Mom-NoteUITests" */;
+			buildPhases = (
+				E2248FDB6D20A9DB30876DA0 /* [CP] Check Pods Manifest.lock */,
+				C516EEDD21CCBE7B004DEAE2 /* Sources */,
+				C516EEDE21CCBE7B004DEAE2 /* Frameworks */,
+				C516EEDF21CCBE7B004DEAE2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C516EEE321CCBE7B004DEAE2 /* PBXTargetDependency */,
+			);
+			name = "Mom-NoteUITests";
+			productName = "Mom-NoteUITests";
+			productReference = C516EEE121CCBE7B004DEAE2 /* Mom-NoteUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C516EEBA21CCBE7A004DEAE2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = Heinoc;
+				TargetAttributes = {
+					C516EEC121CCBE7A004DEAE2 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					C516EED521CCBE7B004DEAE2 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = C516EEC121CCBE7A004DEAE2;
+					};
+					C516EEE021CCBE7B004DEAE2 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = C516EEC121CCBE7A004DEAE2;
+					};
+				};
+			};
+			buildConfigurationList = C516EEBD21CCBE7A004DEAE2 /* Build configuration list for PBXProject "Mom-Note" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C516EEB921CCBE7A004DEAE2;
+			productRefGroup = C516EEC321CCBE7A004DEAE2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C516EEC121CCBE7A004DEAE2 /* Mom-Note */,
+				C516EED521CCBE7B004DEAE2 /* Mom-NoteTests */,
+				C516EEE021CCBE7B004DEAE2 /* Mom-NoteUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C516EEC021CCBE7A004DEAE2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C516EED021CCBE7A004DEAE2 /* LaunchScreen.storyboard in Resources */,
+				C516EECD21CCBE7A004DEAE2 /* Assets.xcassets in Resources */,
+				C516EECB21CCBE7A004DEAE2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C516EED421CCBE7B004DEAE2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C516EEDF21CCBE7B004DEAE2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		04BCCC39C2059E1EB293B330 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Mom-NoteTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		375B12D616C650F66D794774 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Mom-Note-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4C81E3044F93CEFACF56D561 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Mom-Note/Pods-Mom-Note-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Mom-Note/Pods-Mom-Note-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E2248FDB6D20A9DB30876DA0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Mom-NoteUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C516EEBE21CCBE7A004DEAE2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C516EEC821CCBE7A004DEAE2 /* ViewController.swift in Sources */,
+				C516EEC621CCBE7A004DEAE2 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C516EED221CCBE7B004DEAE2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C516EEDB21CCBE7B004DEAE2 /* Mom_NoteTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C516EEDD21CCBE7B004DEAE2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C516EEE621CCBE7B004DEAE2 /* Mom_NoteUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C516EED821CCBE7B004DEAE2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C516EEC121CCBE7A004DEAE2 /* Mom-Note */;
+			targetProxy = C516EED721CCBE7B004DEAE2 /* PBXContainerItemProxy */;
+		};
+		C516EEE321CCBE7B004DEAE2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C516EEC121CCBE7A004DEAE2 /* Mom-Note */;
+			targetProxy = C516EEE221CCBE7B004DEAE2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C516EEC921CCBE7A004DEAE2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C516EECA21CCBE7A004DEAE2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C516EECE21CCBE7A004DEAE2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C516EECF21CCBE7A004DEAE2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C516EEE821CCBE7B004DEAE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C516EEE921CCBE7B004DEAE2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C516EEEB21CCBE7B004DEAE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 186A7DAD6578D065F02EBC5B /* Pods-Mom-Note.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7XVM5NX5SV;
+				INFOPLIST_FILE = "Mom-Note/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.heinoc.Mom-Note";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C516EEEC21CCBE7B004DEAE2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE526026CBB7A4BD5DD25A84 /* Pods-Mom-Note.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7XVM5NX5SV;
+				INFOPLIST_FILE = "Mom-Note/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.heinoc.Mom-Note";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C516EEEE21CCBE7B004DEAE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A601A868F216EAAAC9E6CBC6 /* Pods-Mom-NoteTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7XVM5NX5SV;
+				INFOPLIST_FILE = "Mom-NoteTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.heinoc.Mom-NoteTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mom-Note.app/Mom-Note";
+			};
+			name = Debug;
+		};
+		C516EEEF21CCBE7B004DEAE2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6CF063BF2F03B2CDC1C99334 /* Pods-Mom-NoteTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7XVM5NX5SV;
+				INFOPLIST_FILE = "Mom-NoteTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.heinoc.Mom-NoteTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mom-Note.app/Mom-Note";
+			};
+			name = Release;
+		};
+		C516EEF121CCBE7B004DEAE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B62B9FD61FEC6231822779BF /* Pods-Mom-NoteUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7XVM5NX5SV;
+				INFOPLIST_FILE = "Mom-NoteUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.heinoc.Mom-NoteUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Mom-Note";
+			};
+			name = Debug;
+		};
+		C516EEF221CCBE7B004DEAE2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3CD2BB039A2D7C396F6D0C1 /* Pods-Mom-NoteUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7XVM5NX5SV;
+				INFOPLIST_FILE = "Mom-NoteUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.heinoc.Mom-NoteUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Mom-Note";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C516EEBD21CCBE7A004DEAE2 /* Build configuration list for PBXProject "Mom-Note" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C516EEE821CCBE7B004DEAE2 /* Debug */,
+				C516EEE921CCBE7B004DEAE2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C516EEEA21CCBE7B004DEAE2 /* Build configuration list for PBXNativeTarget "Mom-Note" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C516EEEB21CCBE7B004DEAE2 /* Debug */,
+				C516EEEC21CCBE7B004DEAE2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C516EEED21CCBE7B004DEAE2 /* Build configuration list for PBXNativeTarget "Mom-NoteTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C516EEEE21CCBE7B004DEAE2 /* Debug */,
+				C516EEEF21CCBE7B004DEAE2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C516EEF021CCBE7B004DEAE2 /* Build configuration list for PBXNativeTarget "Mom-NoteUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C516EEF121CCBE7B004DEAE2 /* Debug */,
+				C516EEF221CCBE7B004DEAE2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C516EEBA21CCBE7A004DEAE2 /* Project object */;
+}
