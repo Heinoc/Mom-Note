@@ -8,6 +8,8 @@ target 'Mom-Note' do
   # Pods for Mom-Note
 
   pod 'SnapKit', '~> 4.0.0'
+  # tabbar
+  pod 'ESTabBarController-swift'
 
 
 

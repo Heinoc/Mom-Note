@@ -11,11 +11,16 @@
 		9D161497557595FE85137061 /* Pods_Mom_Note.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14070CE8AD271150B79F2BB0 /* Pods_Mom_Note.framework */; };
 		C516EEC621CCBE7A004DEAE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C516EEC521CCBE7A004DEAE2 /* AppDelegate.swift */; };
 		C516EEC821CCBE7A004DEAE2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C516EEC721CCBE7A004DEAE2 /* ViewController.swift */; };
-		C516EECB21CCBE7A004DEAE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C516EEC921CCBE7A004DEAE2 /* Main.storyboard */; };
 		C516EECD21CCBE7A004DEAE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C516EECC21CCBE7A004DEAE2 /* Assets.xcassets */; };
 		C516EED021CCBE7A004DEAE2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C516EECE21CCBE7A004DEAE2 /* LaunchScreen.storyboard */; };
 		C516EEDB21CCBE7B004DEAE2 /* Mom_NoteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C516EEDA21CCBE7B004DEAE2 /* Mom_NoteTests.swift */; };
 		C516EEE621CCBE7B004DEAE2 /* Mom_NoteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C516EEE521CCBE7B004DEAE2 /* Mom_NoteUITests.swift */; };
+		C516EEF821DC681B004DEAE2 /* RecordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C516EEF721DC681B004DEAE2 /* RecordController.swift */; };
+		C516EEFC21DC6851004DEAE2 /* HistoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C516EEFB21DC6851004DEAE2 /* HistoryController.swift */; };
+		C516EEFF21DC6C03004DEAE2 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C516EEFE21DC6C03004DEAE2 /* BaseNavigationController.swift */; };
+		C516EF0421DC7302004DEAE2 /* icon_record@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C516EF0221DC7302004DEAE2 /* icon_record@2x.png */; };
+		C516EF0521DC7302004DEAE2 /* icon_record@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C516EF0321DC7302004DEAE2 /* icon_record@3x.png */; };
+		C516EF0721DC7A38004DEAE2 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C516EF0621DC7A38004DEAE2 /* BaseViewController.swift */; };
 		D4B09F00ACE5B6906552E8BE /* Pods_Mom_NoteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41C72EDE7E09D739FCCFFCCE /* Pods_Mom_NoteTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,7 +53,6 @@
 		C516EEC221CCBE7A004DEAE2 /* Mom-Note.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mom-Note.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C516EEC521CCBE7A004DEAE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C516EEC721CCBE7A004DEAE2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C516EECA21CCBE7A004DEAE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C516EECC21CCBE7A004DEAE2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C516EECF21CCBE7A004DEAE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C516EED121CCBE7A004DEAE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -58,6 +62,12 @@
 		C516EEE121CCBE7B004DEAE2 /* Mom-NoteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mom-NoteUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C516EEE521CCBE7B004DEAE2 /* Mom_NoteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mom_NoteUITests.swift; sourceTree = "<group>"; };
 		C516EEE721CCBE7B004DEAE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C516EEF721DC681B004DEAE2 /* RecordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordController.swift; sourceTree = "<group>"; };
+		C516EEFB21DC6851004DEAE2 /* HistoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryController.swift; sourceTree = "<group>"; };
+		C516EEFE21DC6C03004DEAE2 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		C516EF0221DC7302004DEAE2 /* icon_record@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_record@2x.png"; sourceTree = "<group>"; };
+		C516EF0321DC7302004DEAE2 /* icon_record@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_record@3x.png"; sourceTree = "<group>"; };
+		C516EF0621DC7A38004DEAE2 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		D3CD2BB039A2D7C396F6D0C1 /* Pods-Mom-NoteUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mom-NoteUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mom-NoteUITests/Pods-Mom-NoteUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -137,12 +147,12 @@
 		C516EEC421CCBE7A004DEAE2 /* Mom-Note */ = {
 			isa = PBXGroup;
 			children = (
+				C516EF0021DC72D2004DEAE2 /* Resources */,
+				C516EEFD21DC6BF1004DEAE2 /* Base */,
 				C516EEF421CCBF19004DEAE2 /* Common */,
 				C516EEF321CCBF06004DEAE2 /* Modules */,
 				C516EEF521CCBF20004DEAE2 /* Utils */,
 				C516EEC521CCBE7A004DEAE2 /* AppDelegate.swift */,
-				C516EEC721CCBE7A004DEAE2 /* ViewController.swift */,
-				C516EEC921CCBE7A004DEAE2 /* Main.storyboard */,
 				C516EECC21CCBE7A004DEAE2 /* Assets.xcassets */,
 				C516EECE21CCBE7A004DEAE2 /* LaunchScreen.storyboard */,
 				C516EED121CCBE7A004DEAE2 /* Info.plist */,
@@ -171,6 +181,9 @@
 		C516EEF321CCBF06004DEAE2 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				C516EEFA21DC6829004DEAE2 /* History */,
+				C516EEF921DC6822004DEAE2 /* Record */,
+				C516EEC721CCBE7A004DEAE2 /* ViewController.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -187,6 +200,48 @@
 			children = (
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		C516EEF921DC6822004DEAE2 /* Record */ = {
+			isa = PBXGroup;
+			children = (
+				C516EEF721DC681B004DEAE2 /* RecordController.swift */,
+			);
+			path = Record;
+			sourceTree = "<group>";
+		};
+		C516EEFA21DC6829004DEAE2 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				C516EEFB21DC6851004DEAE2 /* HistoryController.swift */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
+		C516EEFD21DC6BF1004DEAE2 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				C516EEFE21DC6C03004DEAE2 /* BaseNavigationController.swift */,
+				C516EF0621DC7A38004DEAE2 /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		C516EF0021DC72D2004DEAE2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C516EF0121DC72D9004DEAE2 /* NavigationBar */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C516EF0121DC72D9004DEAE2 /* NavigationBar */ = {
+			isa = PBXGroup;
+			children = (
+				C516EF0221DC7302004DEAE2 /* icon_record@2x.png */,
+				C516EF0321DC7302004DEAE2 /* icon_record@3x.png */,
+			);
+			path = NavigationBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,8 +353,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C516EED021CCBE7A004DEAE2 /* LaunchScreen.storyboard in Resources */,
+				C516EF0421DC7302004DEAE2 /* icon_record@2x.png in Resources */,
 				C516EECD21CCBE7A004DEAE2 /* Assets.xcassets in Resources */,
-				C516EECB21CCBE7A004DEAE2 /* Main.storyboard in Resources */,
+				C516EF0521DC7302004DEAE2 /* icon_record@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,12 +429,14 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Mom-Note/Pods-Mom-Note-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ESTabBarController-swift/ESTabBarController_swift.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ESTabBarController_swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -415,8 +473,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C516EEFC21DC6851004DEAE2 /* HistoryController.swift in Sources */,
+				C516EEF821DC681B004DEAE2 /* RecordController.swift in Sources */,
 				C516EEC821CCBE7A004DEAE2 /* ViewController.swift in Sources */,
+				C516EEFF21DC6C03004DEAE2 /* BaseNavigationController.swift in Sources */,
 				C516EEC621CCBE7A004DEAE2 /* AppDelegate.swift in Sources */,
+				C516EF0721DC7A38004DEAE2 /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,14 +514,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		C516EEC921CCBE7A004DEAE2 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C516EECA21CCBE7A004DEAE2 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C516EECE21CCBE7A004DEAE2 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

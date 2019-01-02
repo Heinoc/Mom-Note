@@ -8,15 +8,62 @@
 
 import UIKit
 
+import ESTabBarController_swift
+
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegate {
 
     var window: UIWindow?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let tab = customTabbar()
+        
+        self.window?.rootViewController = tab
+        self.window?.makeKeyAndVisible()
+
         return true
+    }
+    
+    func customTabbar() -> ESTabBarController {
+        let tabBarController = ESTabBarController()
+        
+        tabBarController.delegate = self
+        tabBarController.title = "MomNote"
+//        tabBarController.shouldHijackHandler = {
+//            tabbarController, viewController, index in
+//            if index == 2 {
+//                return true
+//            }
+//            return false
+//        }
+//        tabBarController.didHijackHandler = {
+//            [weak tabBarController] tabbarController, viewController, index in
+//
+//            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+//                //                let vc = FMPlayController()
+//                //                tabBarController?.present(vc, animated: true, completion: nil)
+//            }
+//        }
+        
+        let recordController = RecordController()
+        let historyController = HistoryController()
+        
+        recordController.title = "记录"
+        historyController.title = "历史"
+        
+        recordController.tabBarItem = ESTabBarItem.init(ESTabBarItemContentView(), title: "记录", image: UIImage(named: "icon_record"), selectedImage: UIImage(named: "icon_record"), tag: 0)
+        historyController.tabBarItem = ESTabBarItem.init(ESTabBarItemContentView(), title: "历史", image: UIImage(named: "icon_record"), selectedImage: UIImage(named: "icon_record"), tag: 1)
+        
+        let navRecord = BaseNavigationController.init(rootViewController: recordController)
+        let navHistory = BaseNavigationController.init(rootViewController: historyController)
+        
+        tabBarController.viewControllers = [navRecord, navHistory]
+        
+        return tabBarController
+        
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

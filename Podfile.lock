@@ -1,16 +1,20 @@
 PODS:
+  - ESTabBarController-swift (2.6.4)
   - SnapKit (4.0.1)
 
 DEPENDENCIES:
+  - ESTabBarController-swift
   - SnapKit (~> 4.0.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - ESTabBarController-swift
     - SnapKit
 
 SPEC CHECKSUMS:
+  ESTabBarController-swift: 58cca4ab7de980657d99a02181c1ff310983e975
   SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
 
-PODFILE CHECKSUM: 381d1de71feaad3cf0f33cbc15339d437c009cbe
+PODFILE CHECKSUM: b99a4a7364e95492af0c626a1edbecd7a36bbc39
 
 COCOAPODS: 1.5.3
