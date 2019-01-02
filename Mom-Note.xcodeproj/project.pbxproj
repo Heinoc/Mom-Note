@@ -147,11 +147,11 @@
 		C516EEC421CCBE7A004DEAE2 /* Mom-Note */ = {
 			isa = PBXGroup;
 			children = (
-				C516EF0021DC72D2004DEAE2 /* Resources */,
 				C516EEFD21DC6BF1004DEAE2 /* Base */,
 				C516EEF421CCBF19004DEAE2 /* Common */,
 				C516EEF321CCBF06004DEAE2 /* Modules */,
 				C516EEF521CCBF20004DEAE2 /* Utils */,
+				C516EF0021DC72D2004DEAE2 /* Resources */,
 				C516EEC521CCBE7A004DEAE2 /* AppDelegate.swift */,
 				C516EECC21CCBE7A004DEAE2 /* Assets.xcassets */,
 				C516EECE21CCBE7A004DEAE2 /* LaunchScreen.storyboard */,
@@ -181,8 +181,8 @@
 		C516EEF321CCBF06004DEAE2 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				C516EEFA21DC6829004DEAE2 /* History */,
 				C516EEF921DC6822004DEAE2 /* Record */,
+				C516EEFA21DC6829004DEAE2 /* History */,
 				C516EEC721CCBE7A004DEAE2 /* ViewController.swift */,
 			);
 			path = Modules;

@@ -49,13 +49,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
 //        }
         
         let recordController = RecordController()
+        recordController.date = Date()
         let historyController = HistoryController()
         
         recordController.title = "记录"
         historyController.title = "历史"
         
-        recordController.tabBarItem = ESTabBarItem.init(ESTabBarItemContentView(), title: "记录", image: UIImage(named: "icon_record"), selectedImage: UIImage(named: "icon_record"), tag: 0)
-        historyController.tabBarItem = ESTabBarItem.init(ESTabBarItemContentView(), title: "历史", image: UIImage(named: "icon_record"), selectedImage: UIImage(named: "icon_record"), tag: 1)
+        recordController.tabBarItem = ESTabBarItem.init(ESTabBarItemContentView(), title: "记录", image: UIImage(named: "icon_record"), selectedImage: UIImage(named: "icon_record"))
+        historyController.tabBarItem = ESTabBarItem.init(ESTabBarItemContentView(), title: "历史", image: UIImage(named: "icon_record"), selectedImage: UIImage(named: "icon_record"))
         
         let navRecord = BaseNavigationController.init(rootViewController: recordController)
         let navHistory = BaseNavigationController.init(rootViewController: historyController)
