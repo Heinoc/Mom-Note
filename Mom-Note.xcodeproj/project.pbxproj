@@ -21,6 +21,10 @@
 		C516EF0421DC7302004DEAE2 /* icon_record@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C516EF0221DC7302004DEAE2 /* icon_record@2x.png */; };
 		C516EF0521DC7302004DEAE2 /* icon_record@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C516EF0321DC7302004DEAE2 /* icon_record@3x.png */; };
 		C516EF0721DC7A38004DEAE2 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C516EF0621DC7A38004DEAE2 /* BaseViewController.swift */; };
+		C56FA6D121E325D8000980CA /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56FA6D021E325D8000980CA /* UIColorExtension.swift */; };
+		C56FA6D921F85EC6000980CA /* HttpManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56FA6D821F85EC6000980CA /* HttpManager.swift */; };
+		C599D4DA21F865D900241880 /* ServerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C599D4D921F865D900241880 /* ServerAPI.swift */; };
+		C599D4DD21F869A500241880 /* URLConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C599D4DC21F869A500241880 /* URLConstants.swift */; };
 		D4B09F00ACE5B6906552E8BE /* Pods_Mom_NoteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41C72EDE7E09D739FCCFFCCE /* Pods_Mom_NoteTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +72,10 @@
 		C516EF0221DC7302004DEAE2 /* icon_record@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_record@2x.png"; sourceTree = "<group>"; };
 		C516EF0321DC7302004DEAE2 /* icon_record@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_record@3x.png"; sourceTree = "<group>"; };
 		C516EF0621DC7A38004DEAE2 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		C56FA6D021E325D8000980CA /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		C56FA6D821F85EC6000980CA /* HttpManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpManager.swift; sourceTree = "<group>"; };
+		C599D4D921F865D900241880 /* ServerAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerAPI.swift; sourceTree = "<group>"; };
+		C599D4DC21F869A500241880 /* URLConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConstants.swift; sourceTree = "<group>"; };
 		D3CD2BB039A2D7C396F6D0C1 /* Pods-Mom-NoteUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mom-NoteUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mom-NoteUITests/Pods-Mom-NoteUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -147,10 +155,12 @@
 		C516EEC421CCBE7A004DEAE2 /* Mom-Note */ = {
 			isa = PBXGroup;
 			children = (
+				C599D4DB21F8698C00241880 /* Constants */,
 				C516EEFD21DC6BF1004DEAE2 /* Base */,
 				C516EEF421CCBF19004DEAE2 /* Common */,
 				C516EEF321CCBF06004DEAE2 /* Modules */,
 				C516EEF521CCBF20004DEAE2 /* Utils */,
+				C56FA6D721F85EAE000980CA /* Network */,
 				C516EF0021DC72D2004DEAE2 /* Resources */,
 				C516EEC521CCBE7A004DEAE2 /* AppDelegate.swift */,
 				C516EECC21CCBE7A004DEAE2 /* Assets.xcassets */,
@@ -191,6 +201,7 @@
 		C516EEF421CCBF19004DEAE2 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				C56FA6CF21E325B8000980CA /* Extension */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -242,6 +253,39 @@
 				C516EF0321DC7302004DEAE2 /* icon_record@3x.png */,
 			);
 			path = NavigationBar;
+			sourceTree = "<group>";
+		};
+		C56FA6CF21E325B8000980CA /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				C56FA6D021E325D8000980CA /* UIColorExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		C56FA6D721F85EAE000980CA /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				C599D4D821F865C400241880 /* API */,
+				C56FA6D821F85EC6000980CA /* HttpManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		C599D4D821F865C400241880 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				C599D4D921F865D900241880 /* ServerAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		C599D4DB21F8698C00241880 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				C599D4DC21F869A500241880 /* URLConstants.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -429,6 +473,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Mom-Note/Pods-Mom-Note-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/ESTabBarController-swift/ESTabBarController_swift.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
@@ -436,6 +481,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ESTabBarController_swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
@@ -474,11 +520,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				C516EEFC21DC6851004DEAE2 /* HistoryController.swift in Sources */,
+				C599D4DD21F869A500241880 /* URLConstants.swift in Sources */,
+				C56FA6D121E325D8000980CA /* UIColorExtension.swift in Sources */,
 				C516EEF821DC681B004DEAE2 /* RecordController.swift in Sources */,
 				C516EEC821CCBE7A004DEAE2 /* ViewController.swift in Sources */,
 				C516EEFF21DC6C03004DEAE2 /* BaseNavigationController.swift in Sources */,
 				C516EEC621CCBE7A004DEAE2 /* AppDelegate.swift in Sources */,
 				C516EF0721DC7A38004DEAE2 /* BaseViewController.swift in Sources */,
+				C599D4DA21F865D900241880 /* ServerAPI.swift in Sources */,
+				C56FA6D921F85EC6000980CA /* HttpManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,6 +10,8 @@ target 'Mom-Note' do
   pod 'SnapKit', '~> 4.0.0'
   # tabbar
   pod 'ESTabBarController-swift'
+  
+  pod 'Alamofire', '~> 5.0.0.beta.1'
 
 
 

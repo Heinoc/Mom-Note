@@ -14,8 +14,8 @@ class RecordController: BaseViewController {
     var date: Date?
     
     var dateLabel: UILabel?
-    var wightLabel: UILabel?
-    var wightTF: UITextField?
+    var weightLabel: UILabel?
+    var weightTF: UITextField?
     var waistlineLabel: UILabel?
     var waistlineTF: UITextField?
     var hiplineLabel: UILabel?
@@ -46,22 +46,22 @@ class RecordController: BaseViewController {
         dateLabel?.text = self.date?.description
         
         // 体重
-        wightLabel = UILabel()
-        self.view.addSubview(wightLabel!)
-        wightLabel?.text = "体重："
-        wightLabel?.textAlignment = NSTextAlignment.right
-        wightLabel?.snp.makeConstraints{ (maker) -> Void in
+        weightLabel = UILabel()
+        self.view.addSubview(weightLabel!)
+        weightLabel?.text = "体重："
+        weightLabel?.textAlignment = NSTextAlignment.right
+        weightLabel?.snp.makeConstraints{ (maker) -> Void in
             maker.top.equalTo(weakSelf!.dateLabel!.snp.bottom).offset(50)
             maker.left.equalTo(weakSelf!.dateLabel!.snp.left)
             maker.width.equalTo(100)
         }
-        wightTF = UITextField()
-        wightTF?.keyboardType = UIKeyboardType.numberPad
-        wightTF?.borderStyle = UITextField.BorderStyle.roundedRect
-        self.view.addSubview(wightTF!)
-        wightTF?.snp.makeConstraints{ (maker) -> Void in
-            maker.centerY.equalTo(weakSelf!.wightLabel!)
-            maker.left.equalTo(weakSelf!.wightLabel!.snp.right).offset(5)
+        weightTF = UITextField()
+        weightTF?.keyboardType = UIKeyboardType.numberPad
+        weightTF?.borderStyle = UITextField.BorderStyle.roundedRect
+        self.view.addSubview(weightTF!)
+        weightTF?.snp.makeConstraints{ (maker) -> Void in
+            maker.centerY.equalTo(weakSelf!.weightLabel!)
+            maker.left.equalTo(weakSelf!.weightLabel!.snp.right).offset(5)
             maker.right.equalTo(weakSelf!.view).offset(-50)
         }
         
@@ -71,9 +71,9 @@ class RecordController: BaseViewController {
         waistlineLabel?.text = "腰围："
         waistlineLabel?.textAlignment = NSTextAlignment.right
         waistlineLabel?.snp.makeConstraints{ (maker) -> Void in
-            maker.top.equalTo(weakSelf!.wightLabel!.snp.bottom).offset(15)
-            maker.left.equalTo(weakSelf!.wightLabel!.snp.left)
-            maker.width.equalTo(weakSelf!.wightLabel!.snp.width)
+            maker.top.equalTo(weakSelf!.weightLabel!.snp.bottom).offset(15)
+            maker.left.equalTo(weakSelf!.weightLabel!.snp.left)
+            maker.width.equalTo(weakSelf!.weightLabel!.snp.width)
         }
         waistlineTF = UITextField()
         waistlineTF?.keyboardType = UIKeyboardType.numberPad
@@ -81,8 +81,8 @@ class RecordController: BaseViewController {
         self.view.addSubview(waistlineTF!)
         waistlineTF?.snp.makeConstraints{ (maker) -> Void in
             maker.centerY.equalTo(weakSelf!.waistlineLabel!)
-            maker.left.equalTo(weakSelf!.wightTF!.snp.left)
-            maker.width.equalTo(weakSelf!.wightTF!.snp.width)
+            maker.left.equalTo(weakSelf!.weightTF!.snp.left)
+            maker.width.equalTo(weakSelf!.weightTF!.snp.width)
         }
         
         // 臀围
@@ -134,7 +134,7 @@ class RecordController: BaseViewController {
             maker.centerX.equalTo(weakSelf!.view)
             maker.width.equalTo(100)
         }
-        saveBtn?.backgroundColor = UIColor.blue
+        saveBtn?.backgroundColor = UIColor(hex: "#FF2D55")
         saveBtn?.addTarget(self, action: #selector(onBtnClick), for: UIControl.Event.touchUpInside)
         
     }
@@ -142,10 +142,17 @@ class RecordController: BaseViewController {
     @objc func onBtnClick(sender: UIButton?) {
         switch sender {
         case saveBtn:
-            wightTF?.text = ""
+            weightTF?.text = ""
             waistlineTF?.text = ""
             hiplineTF?.text = ""
             thighlineTF?.text = ""
+            
+            
+            ServerAPI.addRecord(userID: "1", weight: "2", waistline: "3") { (response) in
+                
+            }
+
+
         default:
             break
         }
