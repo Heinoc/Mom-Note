@@ -17,7 +17,7 @@ class ServerAPI {
             "weight": weight,
             "waistline": waistline
         ]
-        HttpManager.post(url: URLConstants.ADD_RECORD, params: params, onSuccess: onSuccess)
+        HttpManager<Record>.post(url: URLConstants.ADD_RECORD, params: params, onSuccess: onSuccess)
     }
     
 }

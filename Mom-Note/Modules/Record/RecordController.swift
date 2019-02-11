@@ -149,7 +149,13 @@ class RecordController: BaseViewController {
             
             
             ServerAPI.addRecord(userID: "1", weight: "2", waistline: "3") { (response) in
+
+                print(response)
                 
+                let model = response as! Record
+                self.weightTF?.text = model.weight
+                self.waistlineTF?.text = model.waistline
+
             }
 
 

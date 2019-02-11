@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		184CD188F8A3EA43BDAE6FBB /* Pods_Mom_NoteUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88E6CB5C65E96AA51E3E94C1 /* Pods_Mom_NoteUITests.framework */; };
 		9D161497557595FE85137061 /* Pods_Mom_Note.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14070CE8AD271150B79F2BB0 /* Pods_Mom_Note.framework */; };
+		C504B5E0221167E80046CCB7 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = C504B5DF221167E80046CCB7 /* Record.swift */; };
+		C504B5E2221187690046CCB7 /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C504B5E1221187690046CCB7 /* BaseResponse.swift */; };
 		C516EEC621CCBE7A004DEAE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C516EEC521CCBE7A004DEAE2 /* AppDelegate.swift */; };
 		C516EEC821CCBE7A004DEAE2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C516EEC721CCBE7A004DEAE2 /* ViewController.swift */; };
 		C516EECD21CCBE7A004DEAE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C516EECC21CCBE7A004DEAE2 /* Assets.xcassets */; };
@@ -54,6 +56,8 @@
 		A601A868F216EAAAC9E6CBC6 /* Pods-Mom-NoteTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mom-NoteTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mom-NoteTests/Pods-Mom-NoteTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AE526026CBB7A4BD5DD25A84 /* Pods-Mom-Note.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mom-Note.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mom-Note/Pods-Mom-Note.release.xcconfig"; sourceTree = "<group>"; };
 		B62B9FD61FEC6231822779BF /* Pods-Mom-NoteUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mom-NoteUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mom-NoteUITests/Pods-Mom-NoteUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		C504B5DF221167E80046CCB7 /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
+		C504B5E1221187690046CCB7 /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
 		C516EEC221CCBE7A004DEAE2 /* Mom-Note.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mom-Note.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C516EEC521CCBE7A004DEAE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C516EEC721CCBE7A004DEAE2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -128,6 +132,14 @@
 				88E6CB5C65E96AA51E3E94C1 /* Pods_Mom_NoteUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C504B5DE221167C80046CCB7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C504B5DF221167E80046CCB7 /* Record.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		C516EEB921CCBE7A004DEAE2 = {
@@ -216,6 +228,7 @@
 		C516EEF921DC6822004DEAE2 /* Record */ = {
 			isa = PBXGroup;
 			children = (
+				C504B5DE221167C80046CCB7 /* Model */,
 				C516EEF721DC681B004DEAE2 /* RecordController.swift */,
 			);
 			path = Record;
@@ -268,6 +281,7 @@
 			children = (
 				C599D4D821F865C400241880 /* API */,
 				C56FA6D821F85EC6000980CA /* HttpManager.swift */,
+				C504B5E1221187690046CCB7 /* BaseResponse.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -522,9 +536,11 @@
 				C516EEFC21DC6851004DEAE2 /* HistoryController.swift in Sources */,
 				C599D4DD21F869A500241880 /* URLConstants.swift in Sources */,
 				C56FA6D121E325D8000980CA /* UIColorExtension.swift in Sources */,
+				C504B5E2221187690046CCB7 /* BaseResponse.swift in Sources */,
 				C516EEF821DC681B004DEAE2 /* RecordController.swift in Sources */,
 				C516EEC821CCBE7A004DEAE2 /* ViewController.swift in Sources */,
 				C516EEFF21DC6C03004DEAE2 /* BaseNavigationController.swift in Sources */,
+				C504B5E0221167E80046CCB7 /* Record.swift in Sources */,
 				C516EEC621CCBE7A004DEAE2 /* AppDelegate.swift in Sources */,
 				C516EF0721DC7A38004DEAE2 /* BaseViewController.swift in Sources */,
 				C599D4DA21F865D900241880 /* ServerAPI.swift in Sources */,
