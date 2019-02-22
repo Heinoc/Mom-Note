@@ -26,6 +26,9 @@ struct BaseResponse<T> where T: Codable{
         guard let temp = json["result"] else {
             return nil
         }
+        if temp is String {
+            return temp as? T
+        }
         let jsonDecoder = JSONDecoder()
         let jsonData = try? JSONSerialization.data(withJSONObject: temp, options: [])
         let responseModel: T = try! jsonDecoder.decode(T.self, from: jsonData!)

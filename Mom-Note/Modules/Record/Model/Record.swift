@@ -10,6 +10,8 @@ import Foundation
 
 
 struct Record: Codable {
+//    记录时间
+    var createdTime: String?
 //    体重
     var weight: String?
 //    腰围

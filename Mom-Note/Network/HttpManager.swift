@@ -11,13 +11,15 @@ import Alamofire
 
 
 class HttpManager<T: Codable> {
-    class func get(url: String, params: [String : Any]? = nil, onSuccess: @escaping (_ result: Any) -> ()) {
+    class func get(url: String, params: [String : Any]? = nil, onSuccess: @escaping (_ result: T?) -> ()) {
         print("HttpManager---->GET:" + url + "\nparams:")
         print(params!)
         AF.request(url, method: HTTPMethod.get, parameters: params).responseJSON { (response) in
             print("HttpManager---->GET:" + url + "\nresponse:")
             print(response)
-            onSuccess(response)
+            
+            let responseModel = BaseResponse<T>(data:response.result.value!)
+            onSuccess(responseModel?.result)
         }
         
     }

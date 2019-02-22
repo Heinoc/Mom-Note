@@ -25,11 +25,16 @@ class RecordController: BaseViewController {
     
     var saveBtn: UIButton?
     
+    override func loadView() {
+        super.loadView()
+        
+        initView()
+        
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        initView()
-
     }
     
     private func initView() {
@@ -142,19 +147,18 @@ class RecordController: BaseViewController {
     @objc func onBtnClick(sender: UIButton?) {
         switch sender {
         case saveBtn:
-            weightTF?.text = ""
-            waistlineTF?.text = ""
-            hiplineTF?.text = ""
-            thighlineTF?.text = ""
             
+            let weight = weightTF?.text ?? ""
+            let waistline = waistlineTF?.text ?? ""
+            let hipline = hiplineTF?.text ?? ""
+            let thighline = thighlineTF?.text ?? ""
             
-            ServerAPI.addRecord(userID: "1", weight: "2", waistline: "3") { (response) in
+            ServerAPI.addRecord(userID: "bhh53oul0s12256vdqug", weight: weight, waistline: waistline, hipline: hipline, thighline: thighline) { (response) in
 
-                print(response)
-                
-                let model = response as! Record
-                self.weightTF?.text = model.weight
-                self.waistlineTF?.text = model.waistline
+                self.weightTF?.text = ""
+                self.waistlineTF?.text = ""
+                self.hiplineTF?.text = ""
+                self.thighlineTF?.text = ""
 
             }
 
