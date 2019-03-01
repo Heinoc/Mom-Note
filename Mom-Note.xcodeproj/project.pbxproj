@@ -30,6 +30,9 @@
 		C56FA6D921F85EC6000980CA /* HttpManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56FA6D821F85EC6000980CA /* HttpManager.swift */; };
 		C599D4DA21F865D900241880 /* ServerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C599D4D921F865D900241880 /* ServerAPI.swift */; };
 		C599D4DD21F869A500241880 /* URLConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C599D4DC21F869A500241880 /* URLConstants.swift */; };
+		C5BBAF7C2227D1820059D28B /* HistoryRecordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BBAF7B2227D1820059D28B /* HistoryRecordController.swift */; };
+		C5BBAF7E2227D3B60059D28B /* HistoryTypeTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BBAF7D2227D3B60059D28B /* HistoryTypeTableCell.swift */; };
+		C5BBAF802227D5E90059D28B /* HistoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BBAF7F2227D5E90059D28B /* HistoryType.swift */; };
 		D4B09F00ACE5B6906552E8BE /* Pods_Mom_NoteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41C72EDE7E09D739FCCFFCCE /* Pods_Mom_NoteTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -86,6 +89,9 @@
 		C56FA6D821F85EC6000980CA /* HttpManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpManager.swift; sourceTree = "<group>"; };
 		C599D4D921F865D900241880 /* ServerAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerAPI.swift; sourceTree = "<group>"; };
 		C599D4DC21F869A500241880 /* URLConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConstants.swift; sourceTree = "<group>"; };
+		C5BBAF7B2227D1820059D28B /* HistoryRecordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryRecordController.swift; sourceTree = "<group>"; };
+		C5BBAF7D2227D3B60059D28B /* HistoryTypeTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTypeTableCell.swift; sourceTree = "<group>"; };
+		C5BBAF7F2227D5E90059D28B /* HistoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryType.swift; sourceTree = "<group>"; };
 		D3CD2BB039A2D7C396F6D0C1 /* Pods-Mom-NoteUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mom-NoteUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mom-NoteUITests/Pods-Mom-NoteUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -168,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				C504B5E82212CA570046CCB7 /* RecordHistoryResponse.swift */,
+				C5BBAF7F2227D5E90059D28B /* HistoryType.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -176,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				C504B5EB2212D1810046CCB7 /* RecordTableCell.swift */,
+				C5BBAF7D2227D3B60059D28B /* HistoryTypeTableCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -279,6 +287,7 @@
 				C504B5EA2212D1710046CCB7 /* View */,
 				C504B5E7221294630046CCB7 /* Model */,
 				C516EEFB21DC6851004DEAE2 /* HistoryController.swift */,
+				C5BBAF7B2227D1820059D28B /* HistoryRecordController.swift */,
 			);
 			path = History;
 			sourceTree = "<group>";
@@ -531,6 +540,7 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/ESTabBarController-swift/ESTabBarController_swift.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -539,6 +549,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ESTabBarController_swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -579,14 +590,17 @@
 				C599D4DD21F869A500241880 /* URLConstants.swift in Sources */,
 				C504B5EC2212D1810046CCB7 /* RecordTableCell.swift in Sources */,
 				C56FA6D121E325D8000980CA /* UIColorExtension.swift in Sources */,
+				C5BBAF7E2227D3B60059D28B /* HistoryTypeTableCell.swift in Sources */,
 				C504B5E2221187690046CCB7 /* BaseResponse.swift in Sources */,
 				C516EEF821DC681B004DEAE2 /* RecordController.swift in Sources */,
 				C516EEC821CCBE7A004DEAE2 /* ViewController.swift in Sources */,
 				C516EEFF21DC6C03004DEAE2 /* BaseNavigationController.swift in Sources */,
+				C5BBAF802227D5E90059D28B /* HistoryType.swift in Sources */,
 				C504B5E0221167E80046CCB7 /* Record.swift in Sources */,
 				C516EEC621CCBE7A004DEAE2 /* AppDelegate.swift in Sources */,
 				C516EF0721DC7A38004DEAE2 /* BaseViewController.swift in Sources */,
 				C599D4DA21F865D900241880 /* ServerAPI.swift in Sources */,
+				C5BBAF7C2227D1820059D28B /* HistoryRecordController.swift in Sources */,
 				C504B5E92212CA570046CCB7 /* RecordHistoryResponse.swift in Sources */,
 				C56FA6D921F85EC6000980CA /* HttpManager.swift in Sources */,
 			);

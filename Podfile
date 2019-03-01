@@ -12,7 +12,9 @@ target 'Mom-Note' do
   pod 'ESTabBarController-swift'
   
   pod 'Alamofire', '~> 5.0.0.beta.1'
-
+  
+  # toast
+pod 'Toast-Swift', '~> 4.0.0'
 
 
   target 'Mom-NoteTests' do

@@ -9,6 +9,8 @@
 import UIKit
 import SnapKit
 
+import Toast_Swift
+
 class RecordController: BaseViewController {
     
     var date: Date?
@@ -18,6 +20,8 @@ class RecordController: BaseViewController {
     var weightTF: UITextField?
     var waistlineLabel: UILabel?
     var waistlineTF: UITextField?
+    var bustLabel: UILabel?
+    var bustTF: UITextField?
     var hiplineLabel: UILabel?
     var hiplineTF: UITextField?
     var thighlineLabel: UILabel?
@@ -90,15 +94,35 @@ class RecordController: BaseViewController {
             maker.width.equalTo(weakSelf!.weightTF!.snp.width)
         }
         
+        // 胸围
+        bustLabel = UILabel()
+        self.view.addSubview(bustLabel!)
+        bustLabel?.text = "胸围："
+        bustLabel?.textAlignment = NSTextAlignment.right
+        bustLabel?.snp.makeConstraints{ (maker) -> Void in
+            maker.top.equalTo(weakSelf!.waistlineLabel!.snp.bottom).offset(15)
+            maker.left.equalTo(weakSelf!.waistlineLabel!.snp.left)
+            maker.width.equalTo(weakSelf!.waistlineLabel!.snp.width)
+        }
+        bustTF = UITextField()
+        bustTF?.keyboardType = UIKeyboardType.numberPad
+        bustTF?.borderStyle = UITextField.BorderStyle.roundedRect
+        self.view.addSubview(bustTF!)
+        bustTF?.snp.makeConstraints{ (maker) -> Void in
+            maker.centerY.equalTo(weakSelf!.bustLabel!)
+            maker.left.equalTo(weakSelf!.weightTF!.snp.left)
+            maker.width.equalTo(weakSelf!.weightTF!.snp.width)
+        }
+        
         // 臀围
         hiplineLabel = UILabel()
         self.view.addSubview(hiplineLabel!)
         hiplineLabel?.text = "臀围："
         hiplineLabel?.textAlignment = NSTextAlignment.right
         hiplineLabel?.snp.makeConstraints{ (maker) -> Void in
-            maker.top.equalTo(weakSelf!.waistlineLabel!.snp.bottom).offset(15)
-            maker.left.equalTo(weakSelf!.waistlineLabel!.snp.left)
-            maker.width.equalTo(weakSelf!.waistlineLabel!.snp.width)
+            maker.top.equalTo(weakSelf!.bustLabel!.snp.bottom).offset(15)
+            maker.left.equalTo(weakSelf!.bustLabel!.snp.left)
+            maker.width.equalTo(weakSelf!.bustLabel!.snp.width)
         }
         hiplineTF = UITextField()
         hiplineTF?.keyboardType = UIKeyboardType.numberPad
@@ -153,14 +177,17 @@ class RecordController: BaseViewController {
             let hipline = hiplineTF?.text ?? ""
             let thighline = thighlineTF?.text ?? ""
             
-            ServerAPI.addRecord(userID: "bhh53oul0s12256vdqug", weight: weight, waistline: waistline, hipline: hipline, thighline: thighline) { (response) in
+            ServerAPI.addRecord(userID: "bhh53oul0s12256vdqug", weight: weight, waistline: waistline, hipline: hipline, thighline: thighline, onSuccess: { (response) in
 
                 self.weightTF?.text = ""
                 self.waistlineTF?.text = ""
                 self.hiplineTF?.text = ""
                 self.thighlineTF?.text = ""
 
-            }
+            },
+                                onFail: { (errMsg) in
+                                self.view.makeToast(errMsg)
+            })
 
 
         default:
