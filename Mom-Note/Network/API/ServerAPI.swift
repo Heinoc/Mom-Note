@@ -36,18 +36,17 @@ class ServerAPI {
     }
     
     class func addRecord(userID: String,
-                         weight: String,
-                         waistline: String,
-                         hipline: String,
-                         thighline: String,
+                         record: Record,
                          onSuccess: @escaping (_ response: Any) -> (),
                          onFail: @escaping (_ errMsg: String) -> ()) {
         let params = [
             "userID": userID,
-            "weight": weight,
-            "waistline": waistline,
-            "hipline": hipline,
-            "thighline": thighline
+            "weight": record.weight ?? "0",
+            "armline": record.armline ?? "0",
+            "waistline": record.waistline ?? "0",
+            "bust": record.bust ?? "0",
+            "hipline": record.hipline ?? "0",
+            "thighline": record.thighline ?? "0"
         ]
         HttpManager<String>.post(url: URLConstants.ADD_RECORD, params: params, onSuccess: onSuccess, onFail: onFail)
     }

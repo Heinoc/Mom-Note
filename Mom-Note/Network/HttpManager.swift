@@ -41,7 +41,7 @@ class HttpManager<T: Codable> {
             print("HttpManager---->POST:" + url + "\nresponse:")
             print(response)
             
-            if response.error != nil {
+            if response.error == nil {
                 let responseModel = BaseResponse<T>(data:response.result.value!)
                 onSuccess(responseModel?.result)
             } else {

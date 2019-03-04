@@ -13,10 +13,8 @@ import SnapKit
 class RecordTableCell: UITableViewCell {
     
     var timeLabel: UILabel!
-    var weightLabel: UILabel!
-    var waistlineLabel: UILabel!
-    var hiplineLabel: UILabel!
-    var thighlineLabel: UILabel!
+    var recordLabel: UILabel!
+    var dividerLine: UIView!
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -37,53 +35,32 @@ class RecordTableCell: UITableViewCell {
         timeLabel = UILabel()
         timeLabel.textAlignment = NSTextAlignment.center
         self.contentView.addSubview(timeLabel)
-        weightLabel = UILabel()
-        weightLabel.textAlignment = NSTextAlignment.center
-        self.contentView.addSubview(weightLabel)
-        waistlineLabel = UILabel()
-        waistlineLabel.textAlignment = NSTextAlignment.center
-        self.contentView.addSubview(waistlineLabel)
-        hiplineLabel = UILabel()
-        hiplineLabel.textAlignment = NSTextAlignment.center
-        self.contentView.addSubview(hiplineLabel)
-        thighlineLabel = UILabel()
-        thighlineLabel.textAlignment = NSTextAlignment.center
-        self.contentView.addSubview(thighlineLabel)
+        recordLabel = UILabel()
+        recordLabel.textAlignment = NSTextAlignment.center
+        self.contentView.addSubview(recordLabel)
+        dividerLine = UIView()
+        dividerLine.backgroundColor = UIColor.init(hex: "#55222222")
+        self.contentView.addSubview(dividerLine)
         
         timeLabel.snp.makeConstraints { (maker) in
             maker.top.equalTo(weakSelf!.contentView)
             maker.bottom.equalTo(weakSelf!.contentView)
-            maker.left.equalTo(weakSelf!.contentView).offset(10)
-            maker.width.equalTo(weakSelf!.contentView.snp.width).multipliedBy(0.3).offset(-20)
+            maker.left.equalTo(weakSelf!.contentView)
+            maker.width.equalTo(weakSelf!.contentView.snp.width).multipliedBy(0.5)
         }
 
-        weightLabel.snp.makeConstraints { (maker) in
+        recordLabel.snp.makeConstraints { (maker) in
             maker.top.equalTo(weakSelf!.timeLabel)
             maker.bottom.equalTo(weakSelf!.timeLabel)
             maker.left.equalTo(weakSelf!.timeLabel.snp.right)
-            maker.width.equalTo(weakSelf!.contentView.snp.width).multipliedBy(0.7 / 4)
+            maker.width.equalTo(weakSelf!.contentView.snp.width).multipliedBy(0.5)
         }
         
-        waistlineLabel.snp.makeConstraints { (maker) in
-            maker.top.equalTo(weakSelf!.timeLabel)
-            maker.bottom.equalTo(weakSelf!.timeLabel)
-            maker.left.equalTo(weakSelf!.weightLabel.snp.right)
-            maker.width.equalTo(weakSelf!.weightLabel.snp.width)
-        }
-        
-        hiplineLabel.snp.makeConstraints { (maker) in
-            maker.top.equalTo(weakSelf!.timeLabel)
-            maker.bottom.equalTo(weakSelf!.timeLabel)
-            maker.left.equalTo(weakSelf!.waistlineLabel.snp.right)
-            maker.width.equalTo(weakSelf!.weightLabel.snp.width)
-        }
-        
-        thighlineLabel.snp.makeConstraints { (maker) in
-            maker.top.equalTo(weakSelf!.timeLabel)
-            maker.bottom.equalTo(weakSelf!.timeLabel)
-            maker.left.equalTo(weakSelf!.hiplineLabel.snp.right)
-            maker.right.equalTo(weakSelf!.contentView).offset(-10)
-            maker.width.equalTo(weakSelf!.weightLabel.snp.width)
+        dividerLine.snp.makeConstraints { (maker) in
+            maker.bottom.equalTo(weakSelf!.contentView.snp.bottom)
+            maker.left.equalTo(weakSelf!.contentView.snp.left).offset(20)
+            maker.width.equalTo(weakSelf!.contentView.snp.width).offset(-20)
+            maker.height.equalTo(1)
         }
         
     }
@@ -97,10 +74,7 @@ class RecordTableCell: UITableViewCell {
         super.prepareForReuse()
         
         self.timeLabel.text = ""
-        self.weightLabel.text = ""
-        self.waistlineLabel.text = ""
-        self.hiplineLabel.text = ""
-        self.thighlineLabel.text = ""
+        self.recordLabel.text = ""
 
     }
 }

@@ -12,17 +12,22 @@ import Toast_Swift
 
 class HistoryRecordController: BaseViewController {
     
+    var recordType : Record.RecordType?
+    
+    
     var timeLabel: UILabel!
-    var weightLabel: UILabel!
-    var waistlineLabel: UILabel!
-    var bustLabel: UILabel!
-    var hiplineLabel: UILabel!
-    var thighlineLabel: UILabel!
+    var recordLabel: UILabel!
     var dividerLineView: UIView!
     
     var tableView: UITableView!
     
     var items: [Record] = []
+//    
+//    init(recordType: Record.RecordType) {
+//        self.recordType = recordType
+//        
+//        
+//    }
     
     override func loadView() {
         super.loadView()
@@ -37,75 +42,32 @@ class HistoryRecordController: BaseViewController {
         let statusHeight = (self.navigationController?.navigationBar.frame.size.height)! + UIApplication.shared.statusBarFrame.size.height
         
         timeLabel = UILabel()
-        timeLabel.text = "记录时间"
+        timeLabel.text = "时间"
         timeLabel.textAlignment = NSTextAlignment.center
         self.view.addSubview(timeLabel)
-        weightLabel = UILabel()
-        weightLabel.text = "体重"
-        weightLabel.textAlignment = NSTextAlignment.center
-        self.view.addSubview(weightLabel)
-        waistlineLabel = UILabel()
-        waistlineLabel.text = "腰围"
-        waistlineLabel.textAlignment = NSTextAlignment.center
-        self.view.addSubview(waistlineLabel)
-        bustLabel = UILabel()
-        bustLabel.text = "胸围"
-        bustLabel.textAlignment = NSTextAlignment.center
-        self.view.addSubview(bustLabel)
-        hiplineLabel = UILabel()
-        hiplineLabel.text = "臀围"
-        hiplineLabel.textAlignment = NSTextAlignment.center
-        self.view.addSubview(hiplineLabel)
-        thighlineLabel = UILabel()
-        thighlineLabel.text = "大腿围"
-        thighlineLabel.textAlignment = NSTextAlignment.center
-        self.view.addSubview(thighlineLabel)
+        recordLabel = UILabel()
+        recordLabel.text = "记录"
+        recordLabel.textAlignment = NSTextAlignment.center
+        self.view.addSubview(recordLabel)
         dividerLineView = UIView()
         dividerLineView.backgroundColor = UIColor.gray
         self.view.addSubview(dividerLineView)
         
         timeLabel.snp.makeConstraints { (maker) in
             maker.top.equalTo(weakSelf!.view).offset(statusHeight + 10)
-            maker.left.equalTo(weakSelf!.view).offset(10)
-            maker.width.equalTo(weakSelf!.view.snp.width).multipliedBy(0.3).offset(-20)
+            maker.left.equalTo(weakSelf!.view)
+            maker.width.equalTo(weakSelf!.view.snp.width).multipliedBy(0.5)
             maker.height.equalTo(40)
         }
         
-        weightLabel.snp.makeConstraints { (maker) in
+        recordLabel.snp.makeConstraints { (maker) in
             maker.top.equalTo(weakSelf!.timeLabel)
             maker.bottom.equalTo(weakSelf!.timeLabel)
             maker.left.equalTo(weakSelf!.timeLabel.snp.right)
-            maker.width.equalTo(weakSelf!.view.snp.width).multipliedBy(0.7 / 4)
+            maker.width.equalTo(weakSelf!.view.snp.width).multipliedBy(0.5)
         }
         
-        waistlineLabel.snp.makeConstraints { (maker) in
-            maker.top.equalTo(weakSelf!.timeLabel)
-            maker.bottom.equalTo(weakSelf!.timeLabel)
-            maker.left.equalTo(weakSelf!.weightLabel.snp.right)
-            maker.width.equalTo(weakSelf!.weightLabel.snp.width)
-        }
-        
-        bustLabel.snp.makeConstraints { (maker) in
-            maker.top.equalTo(weakSelf!.timeLabel)
-            maker.bottom.equalTo(weakSelf!.timeLabel)
-            maker.left.equalTo(weakSelf!.waistlineLabel.snp.right)
-            maker.width.equalTo(weakSelf!.waistlineLabel.snp.width)
-        }
-        
-        hiplineLabel.snp.makeConstraints { (maker) in
-            maker.top.equalTo(weakSelf!.timeLabel)
-            maker.bottom.equalTo(weakSelf!.timeLabel)
-            maker.left.equalTo(weakSelf!.bustLabel.snp.right)
-            maker.width.equalTo(weakSelf!.weightLabel.snp.width)
-        }
-        
-        thighlineLabel.snp.makeConstraints { (maker) in
-            maker.top.equalTo(weakSelf!.timeLabel)
-            maker.bottom.equalTo(weakSelf!.timeLabel)
-            maker.left.equalTo(weakSelf!.hiplineLabel.snp.right)
-            maker.right.equalTo(weakSelf!.view).offset(-10)
-            maker.width.equalTo(weakSelf!.weightLabel.snp.width)
-        }
+
         dividerLineView.snp.makeConstraints { (maker) in
             maker.top.equalTo(weakSelf!.timeLabel.snp.bottom)
             maker.left.equalTo(weakSelf!.view)
@@ -132,7 +94,7 @@ class HistoryRecordController: BaseViewController {
         super.viewDidLoad()
         
         self.tableView.register(RecordTableCell.self, forCellReuseIdentifier: "RecordTableCell")
-        
+        self.tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
         self.tableView.dataSource = self
         self.tableView.delegate = self
         
@@ -142,7 +104,7 @@ class HistoryRecordController: BaseViewController {
     
     func loadData() {
         
-        ServerAPI.getRecords(userID: "bhh53oul0s12256vdqug",
+        ServerAPI.getRecords(userID: "bhtrgormvbapu6it7880",
                              pageNum: "1",
                              pageSize: "20",
                              onSuccess: { (response) in
@@ -186,10 +148,8 @@ extension HistoryRecordController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "RecordTableCell", for: indexPath) as! RecordTableCell
         let item = self.items[indexPath.item]
         cell.timeLabel.text = item.createdTime
-        cell.weightLabel.text = item.weight
-        cell.waistlineLabel.text = item.waistline
-        cell.hiplineLabel.text = item.hipline
-        cell.thighlineLabel.text = item.thighline
+        cell.recordLabel.text = item.getItemValue(by: self.recordType!)
+        
         return cell
     }
 }

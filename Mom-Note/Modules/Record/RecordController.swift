@@ -18,6 +18,8 @@ class RecordController: BaseViewController {
     var dateLabel: UILabel?
     var weightLabel: UILabel?
     var weightTF: UITextField?
+    var armlineLabel: UILabel?
+    var armlineTF: UITextField?
     var waistlineLabel: UILabel?
     var waistlineTF: UITextField?
     var bustLabel: UILabel?
@@ -35,7 +37,7 @@ class RecordController: BaseViewController {
         initView()
         
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -50,7 +52,7 @@ class RecordController: BaseViewController {
         dateLabel?.snp.makeConstraints{(maker) -> Void in
             maker.left.equalTo(weakSelf!.view).offset(10)
             maker.top.equalTo(weakSelf!.view).offset(statusHeight + 10)
-
+            
         }
         dateLabel?.text = self.date?.description
         
@@ -74,15 +76,35 @@ class RecordController: BaseViewController {
             maker.right.equalTo(weakSelf!.view).offset(-50)
         }
         
+        // 臂围
+        armlineLabel = UILabel()
+        self.view.addSubview(armlineLabel!)
+        armlineLabel?.text = "臂围："
+        armlineLabel?.textAlignment = NSTextAlignment.right
+        armlineLabel?.snp.makeConstraints{ (maker) -> Void in
+            maker.top.equalTo(weakSelf!.weightLabel!.snp.bottom).offset(20)
+            maker.left.equalTo(weakSelf!.weightLabel!.snp.left)
+            maker.width.equalTo(weakSelf!.weightLabel!.snp.width)
+        }
+        armlineTF = UITextField()
+        armlineTF?.keyboardType = UIKeyboardType.numberPad
+        armlineTF?.borderStyle = UITextField.BorderStyle.roundedRect
+        self.view.addSubview(armlineTF!)
+        armlineTF?.snp.makeConstraints{ (maker) -> Void in
+            maker.centerY.equalTo(weakSelf!.armlineLabel!)
+            maker.left.equalTo(weakSelf!.weightTF!.snp.left)
+            maker.width.equalTo(weakSelf!.weightTF!.snp.width)
+        }
+        
         // 腰围
         waistlineLabel = UILabel()
         self.view.addSubview(waistlineLabel!)
         waistlineLabel?.text = "腰围："
         waistlineLabel?.textAlignment = NSTextAlignment.right
         waistlineLabel?.snp.makeConstraints{ (maker) -> Void in
-            maker.top.equalTo(weakSelf!.weightLabel!.snp.bottom).offset(15)
-            maker.left.equalTo(weakSelf!.weightLabel!.snp.left)
-            maker.width.equalTo(weakSelf!.weightLabel!.snp.width)
+            maker.top.equalTo(weakSelf!.armlineLabel!.snp.bottom).offset(20)
+            maker.left.equalTo(weakSelf!.armlineLabel!.snp.left)
+            maker.width.equalTo(weakSelf!.armlineLabel!.snp.width)
         }
         waistlineTF = UITextField()
         waistlineTF?.keyboardType = UIKeyboardType.numberPad
@@ -100,7 +122,7 @@ class RecordController: BaseViewController {
         bustLabel?.text = "胸围："
         bustLabel?.textAlignment = NSTextAlignment.right
         bustLabel?.snp.makeConstraints{ (maker) -> Void in
-            maker.top.equalTo(weakSelf!.waistlineLabel!.snp.bottom).offset(15)
+            maker.top.equalTo(weakSelf!.waistlineLabel!.snp.bottom).offset(20)
             maker.left.equalTo(weakSelf!.waistlineLabel!.snp.left)
             maker.width.equalTo(weakSelf!.waistlineLabel!.snp.width)
         }
@@ -120,7 +142,7 @@ class RecordController: BaseViewController {
         hiplineLabel?.text = "臀围："
         hiplineLabel?.textAlignment = NSTextAlignment.right
         hiplineLabel?.snp.makeConstraints{ (maker) -> Void in
-            maker.top.equalTo(weakSelf!.bustLabel!.snp.bottom).offset(15)
+            maker.top.equalTo(weakSelf!.bustLabel!.snp.bottom).offset(20)
             maker.left.equalTo(weakSelf!.bustLabel!.snp.left)
             maker.width.equalTo(weakSelf!.bustLabel!.snp.width)
         }
@@ -140,7 +162,7 @@ class RecordController: BaseViewController {
         thighlineLabel?.text = "大腿围："
         thighlineLabel?.textAlignment = NSTextAlignment.right
         thighlineLabel?.snp.makeConstraints{ (maker) -> Void in
-            maker.top.equalTo(weakSelf!.hiplineLabel!.snp.bottom).offset(15)
+            maker.top.equalTo(weakSelf!.hiplineLabel!.snp.bottom).offset(20)
             maker.left.equalTo(weakSelf!.hiplineLabel!.snp.left)
             maker.width.equalTo(weakSelf!.hiplineLabel!.snp.width)
         }
@@ -172,27 +194,36 @@ class RecordController: BaseViewController {
         switch sender {
         case saveBtn:
             
-            let weight = weightTF?.text ?? ""
-            let waistline = waistlineTF?.text ?? ""
-            let hipline = hiplineTF?.text ?? ""
-            let thighline = thighlineTF?.text ?? ""
+            var record = Record()
+            record.weight = weightTF?.text ?? ""
+            record.armline = armlineTF?.text ?? ""
+            record.waistline = waistlineTF?.text ?? ""
+            record.bust = bustTF?.text ?? ""
+            record.hipline = hiplineTF?.text ?? ""
+            record.thighline = thighlineTF?.text ?? ""
             
-            ServerAPI.addRecord(userID: "bhh53oul0s12256vdqug", weight: weight, waistline: waistline, hipline: hipline, thighline: thighline, onSuccess: { (response) in
-
-                self.weightTF?.text = ""
-                self.waistlineTF?.text = ""
-                self.hiplineTF?.text = ""
-                self.thighlineTF?.text = ""
-
+            ServerAPI.addRecord(userID: "bhtrgormvbapu6it7880",
+                                record: record,
+                                onSuccess: { (response) in
+                                    
+                                    self.view.makeToast("记录添加成功！")
+                                    
+                                    self.weightTF?.text = ""
+                                    self.armlineTF?.text = ""
+                                    self.waistlineTF?.text = ""
+                                    self.bustTF?.text = ""
+                                    self.hiplineTF?.text = ""
+                                    self.thighlineTF?.text = ""
+                                    
             },
                                 onFail: { (errMsg) in
-                                self.view.makeToast(errMsg)
+                                    self.view.makeToast(errMsg)
             })
-
-
+            
+            
         default:
             break
         }
     }
-
+    
 }

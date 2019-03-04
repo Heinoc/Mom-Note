@@ -11,9 +11,9 @@ import Foundation
 struct HistoryType {
     var icon: String?
     var title: String?
-    var type: String?
+    var type: Record.RecordType?
     
-    init(icon: String, title: String, type: String) {
+    init(icon: String, title: String, type: Record.RecordType) {
         self.icon = icon
         self.title = title
         self.type = type

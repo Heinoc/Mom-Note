@@ -15,6 +15,7 @@ class HistoryTypeTableCell: UITableViewCell {
     var iconIV: UIImageView!
     var titleLabel: UILabel!
     var arrowIV: UIImageView!
+    var dividerLine: UIView!
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -38,6 +39,9 @@ class HistoryTypeTableCell: UITableViewCell {
         self.contentView.addSubview(titleLabel)
         arrowIV = UIImageView()
         self.contentView.addSubview(arrowIV)
+        dividerLine = UIView()
+        dividerLine.backgroundColor = UIColor.init(hex: "#55222222")
+        self.contentView.addSubview(dividerLine)
         
         iconIV.snp.makeConstraints { (maker) in
             maker.top.equalTo(weakSelf!.contentView)
@@ -58,6 +62,13 @@ class HistoryTypeTableCell: UITableViewCell {
             maker.top.equalTo(weakSelf!.contentView)
             maker.bottom.equalTo(weakSelf!.contentView)
             maker.right.equalTo(weakSelf!.contentView).offset(-10)
+        }
+        
+        dividerLine.snp.makeConstraints { (maker) in
+            maker.bottom.equalTo(weakSelf!.contentView.snp.bottom)
+            maker.left.equalTo(weakSelf!.contentView.snp.left).offset(20)
+            maker.width.equalTo(weakSelf!.contentView.snp.width).offset(-20)
+            maker.height.equalTo(1)
         }
         
     }

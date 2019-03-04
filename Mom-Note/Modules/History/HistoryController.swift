@@ -24,9 +24,9 @@ class HistoryController: BaseViewController {
     func initView() {
         
         weak var weakSelf = self
-        let statusHeight = (self.navigationController?.navigationBar.frame.size.height)! + UIApplication.shared.statusBarFrame.size.height
 
         tableView = UITableView(frame: .zero, style: .plain)
+        tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
         tableView.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(tableView)
         
@@ -57,11 +57,12 @@ class HistoryController: BaseViewController {
         
         items = []
         
-        items.append(HistoryType(icon: "", title: "体重", type: "weight"))
-        items.append(HistoryType(icon: "", title: "腰围", type: "waistline"))
-        items.append(HistoryType(icon: "", title: "胸围", type: "bust"))
-        items.append(HistoryType(icon: "", title: "臀围", type: "hipline"))
-        items.append(HistoryType(icon: "", title: "大腿围", type: "thighline"))
+        items.append(HistoryType(icon: "", title: "体重", type: Record.RecordType.WEIGHT))
+        items.append(HistoryType(icon: "", title: "臂围", type: Record.RecordType.ARM_LINE))
+        items.append(HistoryType(icon: "", title: "腰围", type: Record.RecordType.WAIST_LINE))
+        items.append(HistoryType(icon: "", title: "胸围", type: Record.RecordType.BUST))
+        items.append(HistoryType(icon: "", title: "臀围", type: Record.RecordType.HIP_LINE))
+        items.append(HistoryType(icon: "", title: "大腿围", type: Record.RecordType.THIGH_LINE))
         
     }
     
@@ -90,7 +91,7 @@ extension HistoryController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-//        let item = self.items[indexPath.item]
+        let item = self.items[indexPath.item]
 //
 //        let alertController = UIAlertController(title: item, message: "is in da house!", preferredStyle: .alert)
 //        let action = UIAlertAction(title: "Ok", style: .default) { _ in }
@@ -98,6 +99,7 @@ extension HistoryController: UITableViewDelegate {
 //        self.present(alertController, animated: true, completion: nil)
         
         let hitoryRecordController = HistoryRecordController()
+        hitoryRecordController.recordType = item.type
         self.navigationController?.pushViewController(hitoryRecordController, animated: true)
     }
 }
