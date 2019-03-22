@@ -15,7 +15,6 @@
 		C504B5E92212CA570046CCB7 /* RecordHistoryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C504B5E82212CA570046CCB7 /* RecordHistoryResponse.swift */; };
 		C504B5EC2212D1810046CCB7 /* RecordTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C504B5EB2212D1810046CCB7 /* RecordTableCell.swift */; };
 		C516EEC621CCBE7A004DEAE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C516EEC521CCBE7A004DEAE2 /* AppDelegate.swift */; };
-		C516EEC821CCBE7A004DEAE2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C516EEC721CCBE7A004DEAE2 /* ViewController.swift */; };
 		C516EECD21CCBE7A004DEAE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C516EECC21CCBE7A004DEAE2 /* Assets.xcassets */; };
 		C516EED021CCBE7A004DEAE2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C516EECE21CCBE7A004DEAE2 /* LaunchScreen.storyboard */; };
 		C516EEDB21CCBE7B004DEAE2 /* Mom_NoteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C516EEDA21CCBE7B004DEAE2 /* Mom_NoteTests.swift */; };
@@ -26,6 +25,11 @@
 		C516EF0421DC7302004DEAE2 /* icon_record@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C516EF0221DC7302004DEAE2 /* icon_record@2x.png */; };
 		C516EF0521DC7302004DEAE2 /* icon_record@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C516EF0321DC7302004DEAE2 /* icon_record@3x.png */; };
 		C516EF0721DC7A38004DEAE2 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C516EF0621DC7A38004DEAE2 /* BaseViewController.swift */; };
+		C54028442244C65F0030B2B2 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54028432244C65F0030B2B2 /* LoginController.swift */; };
+		C54028462244C6F90030B2B2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54028452244C6F90030B2B2 /* Constants.swift */; };
+		C54028482244D14E0030B2B2 /* PhoneLoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54028472244D14E0030B2B2 /* PhoneLoginController.swift */; };
+		C540284A2244DB8F0030B2B2 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54028492244DB8F0030B2B2 /* RegisterController.swift */; };
+		C540284D2244E2720030B2B2 /* UnderlineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C540284C2244E2720030B2B2 /* UnderlineTextField.swift */; };
 		C56FA6D121E325D8000980CA /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56FA6D021E325D8000980CA /* UIColorExtension.swift */; };
 		C56FA6D921F85EC6000980CA /* HttpManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56FA6D821F85EC6000980CA /* HttpManager.swift */; };
 		C599D4DA21F865D900241880 /* ServerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C599D4D921F865D900241880 /* ServerAPI.swift */; };
@@ -69,7 +73,6 @@
 		C504B5EB2212D1810046CCB7 /* RecordTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTableCell.swift; sourceTree = "<group>"; };
 		C516EEC221CCBE7A004DEAE2 /* Mom-Note.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mom-Note.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C516EEC521CCBE7A004DEAE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C516EEC721CCBE7A004DEAE2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C516EECC21CCBE7A004DEAE2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C516EECF21CCBE7A004DEAE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C516EED121CCBE7A004DEAE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -85,6 +88,11 @@
 		C516EF0221DC7302004DEAE2 /* icon_record@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_record@2x.png"; sourceTree = "<group>"; };
 		C516EF0321DC7302004DEAE2 /* icon_record@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_record@3x.png"; sourceTree = "<group>"; };
 		C516EF0621DC7A38004DEAE2 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		C54028432244C65F0030B2B2 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		C54028452244C6F90030B2B2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C54028472244D14E0030B2B2 /* PhoneLoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneLoginController.swift; sourceTree = "<group>"; };
+		C54028492244DB8F0030B2B2 /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
+		C540284C2244E2720030B2B2 /* UnderlineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlineTextField.swift; sourceTree = "<group>"; };
 		C56FA6D021E325D8000980CA /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		C56FA6D821F85EC6000980CA /* HttpManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpManager.swift; sourceTree = "<group>"; };
 		C599D4D921F865D900241880 /* ServerAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerAPI.swift; sourceTree = "<group>"; };
@@ -218,6 +226,7 @@
 				C516EEF421CCBF19004DEAE2 /* Common */,
 				C516EEF321CCBF06004DEAE2 /* Modules */,
 				C516EEF521CCBF20004DEAE2 /* Utils */,
+				C540284B2244E2430030B2B2 /* Views */,
 				C56FA6D721F85EAE000980CA /* Network */,
 				C516EF0021DC72D2004DEAE2 /* Resources */,
 				C516EEC521CCBE7A004DEAE2 /* AppDelegate.swift */,
@@ -249,10 +258,10 @@
 		C516EEF321CCBF06004DEAE2 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				C54028422244C6470030B2B2 /* Login */,
 				C504B5E3221293530046CCB7 /* User */,
 				C516EEF921DC6822004DEAE2 /* Record */,
 				C516EEFA21DC6829004DEAE2 /* History */,
-				C516EEC721CCBE7A004DEAE2 /* ViewController.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -318,6 +327,24 @@
 			path = NavigationBar;
 			sourceTree = "<group>";
 		};
+		C54028422244C6470030B2B2 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				C54028432244C65F0030B2B2 /* LoginController.swift */,
+				C54028472244D14E0030B2B2 /* PhoneLoginController.swift */,
+				C54028492244DB8F0030B2B2 /* RegisterController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		C540284B2244E2430030B2B2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C540284C2244E2720030B2B2 /* UnderlineTextField.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		C56FA6CF21E325B8000980CA /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -348,6 +375,7 @@
 			isa = PBXGroup;
 			children = (
 				C599D4DC21F869A500241880 /* URLConstants.swift */,
+				C54028452244C6F90030B2B2 /* Constants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -585,21 +613,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C54028442244C65F0030B2B2 /* LoginController.swift in Sources */,
+				C54028462244C6F90030B2B2 /* Constants.swift in Sources */,
 				C504B5E6221293690046CCB7 /* User.swift in Sources */,
 				C516EEFC21DC6851004DEAE2 /* HistoryController.swift in Sources */,
+				C540284D2244E2720030B2B2 /* UnderlineTextField.swift in Sources */,
+				C54028482244D14E0030B2B2 /* PhoneLoginController.swift in Sources */,
 				C599D4DD21F869A500241880 /* URLConstants.swift in Sources */,
 				C504B5EC2212D1810046CCB7 /* RecordTableCell.swift in Sources */,
 				C56FA6D121E325D8000980CA /* UIColorExtension.swift in Sources */,
 				C5BBAF7E2227D3B60059D28B /* HistoryTypeTableCell.swift in Sources */,
 				C504B5E2221187690046CCB7 /* BaseResponse.swift in Sources */,
 				C516EEF821DC681B004DEAE2 /* RecordController.swift in Sources */,
-				C516EEC821CCBE7A004DEAE2 /* ViewController.swift in Sources */,
 				C516EEFF21DC6C03004DEAE2 /* BaseNavigationController.swift in Sources */,
 				C5BBAF802227D5E90059D28B /* HistoryType.swift in Sources */,
 				C504B5E0221167E80046CCB7 /* Record.swift in Sources */,
 				C516EEC621CCBE7A004DEAE2 /* AppDelegate.swift in Sources */,
 				C516EF0721DC7A38004DEAE2 /* BaseViewController.swift in Sources */,
 				C599D4DA21F865D900241880 /* ServerAPI.swift in Sources */,
+				C540284A2244DB8F0030B2B2 /* RegisterController.swift in Sources */,
 				C5BBAF7C2227D1820059D28B /* HistoryRecordController.swift in Sources */,
 				C504B5E92212CA570046CCB7 /* RecordHistoryResponse.swift in Sources */,
 				C56FA6D921F85EC6000980CA /* HttpManager.swift in Sources */,
