@@ -19,9 +19,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        let tab = customTabbar()
+        let defaults = UserDefaults.standard
+        let userID = defaults.string(forKey: LoginInfo.userID)
         
-        self.window?.rootViewController = tab
+        if userID == nil || userID == "" {
+            let login = LoginController()
+            let nav = UINavigationController(rootViewController: login)
+            
+            self.window?.rootViewController = nav
+        } else {
+            let tab = customTabbar()
+            self.window?.rootViewController = tab
+        }
         self.window?.makeKeyAndVisible()
 
         return true
