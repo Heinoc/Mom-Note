@@ -60,6 +60,7 @@ class LoginController: UIViewController {
             maker.bottom.equalTo(wsSelf!.registerBtn!.snp.top).offset(-20)
             maker.left.equalTo(wsSelf!.view).offset(20)
             maker.right.equalTo(wsSelf!.view).offset(-20)
+            maker.height.equalTo(44)
         })
 
     }

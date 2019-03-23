@@ -38,7 +38,7 @@ class SingleButtonTableCell: UITableViewCell {
         button.snp.makeConstraints{ (maker) -> Void in
             maker.centerY.equalTo(weakSelf!.contentView)
             maker.centerX.equalTo(weakSelf!.contentView)
-            maker.width.equalTo(100)
+            maker.width.equalTo(120)
         }
         button.backgroundColor = UIColor(hex: "#FF2D55")
 
