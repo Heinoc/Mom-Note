@@ -15,21 +15,11 @@ class RecordController: BaseViewController {
     
     var date: Date?
     
-    var dateLabel: UILabel?
-    var weightLabel: UILabel?
-    var weightTF: UITextField?
-    var armlineLabel: UILabel?
-    var armlineTF: UITextField?
-    var waistlineLabel: UILabel?
-    var waistlineTF: UITextField?
-    var bustLabel: UILabel?
-    var bustTF: UITextField?
-    var hiplineLabel: UILabel?
-    var hiplineTF: UITextField?
-    var thighlineLabel: UILabel?
-    var thighlineTF: UITextField?
+    var tableView: UITableView!
     
-    var saveBtn: UIButton?
+    var items: [HistoryType] = []
+    
+    let saveButtonTag = 0x00001
     
     override func loadView() {
         super.loadView()
@@ -38,192 +28,134 @@ class RecordController: BaseViewController {
         
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
-    
     private func initView() {
         weak var weakSelf = self
         let statusHeight = (self.navigationController?.navigationBar.frame.size.height)! + UIApplication.shared.statusBarFrame.size.height
         
-        dateLabel = UILabel()
-        self.view.addSubview(dateLabel!)
-        dateLabel?.snp.makeConstraints{(maker) -> Void in
-            maker.left.equalTo(weakSelf!.view).offset(10)
-            maker.top.equalTo(weakSelf!.view).offset(statusHeight + 10)
-            
-        }
-        dateLabel?.text = self.date?.description
+        tableView = UITableView(frame: .zero, style: .plain)
+        tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        self.view.addSubview(tableView)
         
-        // 体重
-        weightLabel = UILabel()
-        self.view.addSubview(weightLabel!)
-        weightLabel?.text = "体重："
-        weightLabel?.textAlignment = NSTextAlignment.right
-        weightLabel?.snp.makeConstraints{ (maker) -> Void in
-            maker.top.equalTo(weakSelf!.dateLabel!.snp.bottom).offset(50)
-            maker.left.equalTo(weakSelf!.dateLabel!.snp.left)
-            maker.width.equalTo(100)
-        }
-        weightTF = UITextField()
-        weightTF?.keyboardType = UIKeyboardType.numberPad
-        weightTF?.borderStyle = UITextField.BorderStyle.roundedRect
-        self.view.addSubview(weightTF!)
-        weightTF?.snp.makeConstraints{ (maker) -> Void in
-            maker.centerY.equalTo(weakSelf!.weightLabel!)
-            maker.left.equalTo(weakSelf!.weightLabel!.snp.right).offset(5)
-            maker.right.equalTo(weakSelf!.view).offset(-50)
+        tableView.snp.makeConstraints { (maker) in
+            maker.top.equalTo(weakSelf!.view)
+            maker.bottom.equalTo(weakSelf!.view)
+            maker.left.equalTo(weakSelf!.view)
+            maker.right.equalTo(weakSelf!.view)
         }
         
-        // 臂围
-        armlineLabel = UILabel()
-        self.view.addSubview(armlineLabel!)
-        armlineLabel?.text = "臂围："
-        armlineLabel?.textAlignment = NSTextAlignment.right
-        armlineLabel?.snp.makeConstraints{ (maker) -> Void in
-            maker.top.equalTo(weakSelf!.weightLabel!.snp.bottom).offset(20)
-            maker.left.equalTo(weakSelf!.weightLabel!.snp.left)
-            maker.width.equalTo(weakSelf!.weightLabel!.snp.width)
-        }
-        armlineTF = UITextField()
-        armlineTF?.keyboardType = UIKeyboardType.numberPad
-        armlineTF?.borderStyle = UITextField.BorderStyle.roundedRect
-        self.view.addSubview(armlineTF!)
-        armlineTF?.snp.makeConstraints{ (maker) -> Void in
-            maker.centerY.equalTo(weakSelf!.armlineLabel!)
-            maker.left.equalTo(weakSelf!.weightTF!.snp.left)
-            maker.width.equalTo(weakSelf!.weightTF!.snp.width)
-        }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
-        // 腰围
-        waistlineLabel = UILabel()
-        self.view.addSubview(waistlineLabel!)
-        waistlineLabel?.text = "腰围："
-        waistlineLabel?.textAlignment = NSTextAlignment.right
-        waistlineLabel?.snp.makeConstraints{ (maker) -> Void in
-            maker.top.equalTo(weakSelf!.armlineLabel!.snp.bottom).offset(20)
-            maker.left.equalTo(weakSelf!.armlineLabel!.snp.left)
-            maker.width.equalTo(weakSelf!.armlineLabel!.snp.width)
-        }
-        waistlineTF = UITextField()
-        waistlineTF?.keyboardType = UIKeyboardType.numberPad
-        waistlineTF?.borderStyle = UITextField.BorderStyle.roundedRect
-        self.view.addSubview(waistlineTF!)
-        waistlineTF?.snp.makeConstraints{ (maker) -> Void in
-            maker.centerY.equalTo(weakSelf!.waistlineLabel!)
-            maker.left.equalTo(weakSelf!.weightTF!.snp.left)
-            maker.width.equalTo(weakSelf!.weightTF!.snp.width)
-        }
+        self.tableView.register(TextFieldTableCell.self, forCellReuseIdentifier: "TextFieldTableCell")
+        self.tableView.register(SingleButtonTableCell.self, forCellReuseIdentifier: "SingleButtonTableCell")
         
-        // 胸围
-        bustLabel = UILabel()
-        self.view.addSubview(bustLabel!)
-        bustLabel?.text = "胸围："
-        bustLabel?.textAlignment = NSTextAlignment.right
-        bustLabel?.snp.makeConstraints{ (maker) -> Void in
-            maker.top.equalTo(weakSelf!.waistlineLabel!.snp.bottom).offset(20)
-            maker.left.equalTo(weakSelf!.waistlineLabel!.snp.left)
-            maker.width.equalTo(weakSelf!.waistlineLabel!.snp.width)
-        }
-        bustTF = UITextField()
-        bustTF?.keyboardType = UIKeyboardType.numberPad
-        bustTF?.borderStyle = UITextField.BorderStyle.roundedRect
-        self.view.addSubview(bustTF!)
-        bustTF?.snp.makeConstraints{ (maker) -> Void in
-            maker.centerY.equalTo(weakSelf!.bustLabel!)
-            maker.left.equalTo(weakSelf!.weightTF!.snp.left)
-            maker.width.equalTo(weakSelf!.weightTF!.snp.width)
-        }
+        self.tableView.dataSource = self
+        self.tableView.delegate = self
         
-        // 臀围
-        hiplineLabel = UILabel()
-        self.view.addSubview(hiplineLabel!)
-        hiplineLabel?.text = "臀围："
-        hiplineLabel?.textAlignment = NSTextAlignment.right
-        hiplineLabel?.snp.makeConstraints{ (maker) -> Void in
-            maker.top.equalTo(weakSelf!.bustLabel!.snp.bottom).offset(20)
-            maker.left.equalTo(weakSelf!.bustLabel!.snp.left)
-            maker.width.equalTo(weakSelf!.bustLabel!.snp.width)
-        }
-        hiplineTF = UITextField()
-        hiplineTF?.keyboardType = UIKeyboardType.numberPad
-        hiplineTF?.borderStyle = UITextField.BorderStyle.roundedRect
-        self.view.addSubview(hiplineTF!)
-        hiplineTF?.snp.makeConstraints{ (maker) -> Void in
-            maker.centerY.equalTo(weakSelf!.hiplineLabel!)
-            maker.left.equalTo(weakSelf!.waistlineTF!.snp.left)
-            maker.width.equalTo(weakSelf!.waistlineTF!.snp.width)
-        }
+        loadData()
         
-        // 大腿围
-        thighlineLabel = UILabel()
-        self.view.addSubview(thighlineLabel!)
-        thighlineLabel?.text = "大腿围："
-        thighlineLabel?.textAlignment = NSTextAlignment.right
-        thighlineLabel?.snp.makeConstraints{ (maker) -> Void in
-            maker.top.equalTo(weakSelf!.hiplineLabel!.snp.bottom).offset(20)
-            maker.left.equalTo(weakSelf!.hiplineLabel!.snp.left)
-            maker.width.equalTo(weakSelf!.hiplineLabel!.snp.width)
-        }
-        thighlineTF = UITextField()
-        thighlineTF?.keyboardType = UIKeyboardType.numberPad
-        thighlineTF?.borderStyle = UITextField.BorderStyle.roundedRect
-        self.view.addSubview(thighlineTF!)
-        thighlineTF?.snp.makeConstraints{ (maker) -> Void in
-            maker.centerY.equalTo(weakSelf!.thighlineLabel!)
-            maker.left.equalTo(weakSelf!.hiplineTF!.snp.left)
-            maker.width.equalTo(weakSelf!.hiplineTF!.snp.width)
-        }
+    }
+    
+    func loadData() {
         
-        // 保存按钮
-        saveBtn = UIButton()
-        saveBtn?.setTitle("记录", for: UIControl.State.normal)
-        self.view.addSubview(saveBtn!)
-        saveBtn?.snp.makeConstraints{ (maker) -> Void in
-            maker.top.equalTo(weakSelf!.thighlineLabel!.snp.bottom).offset(20)
-            maker.centerX.equalTo(weakSelf!.view)
-            maker.width.equalTo(100)
-        }
-        saveBtn?.backgroundColor = UIColor(hex: "#FF2D55")
-        saveBtn?.addTarget(self, action: #selector(onBtnClick), for: UIControl.Event.touchUpInside)
+        items = []
+        
+        items.append(HistoryType(icon: "", title: "体重", type: Record.RecordType.WEIGHT))
+        items.append(HistoryType(icon: "", title: "臂围", type: Record.RecordType.ARM_LINE))
+        items.append(HistoryType(icon: "", title: "腰围", type: Record.RecordType.WAIST_LINE))
+        items.append(HistoryType(icon: "", title: "胸围", type: Record.RecordType.BUST))
+        items.append(HistoryType(icon: "", title: "臀围", type: Record.RecordType.HIP_LINE))
+        items.append(HistoryType(icon: "", title: "大腿围", type: Record.RecordType.THIGH_LINE))
         
     }
     
     @objc func onBtnClick(sender: UIButton?) {
-        switch sender {
-        case saveBtn:
-            
+        switch sender?.tag {
+        case saveButtonTag:
+            print("haha")
             var record = Record()
-            record.weight = weightTF?.text ?? ""
-            record.armline = armlineTF?.text ?? ""
-            record.waistline = waistlineTF?.text ?? ""
-            record.bust = bustTF?.text ?? ""
-            record.hipline = hiplineTF?.text ?? ""
-            record.thighline = thighlineTF?.text ?? ""
-            
-            ServerAPI.addRecord(userID: "bhtrgormvbapu6it7880",
-                                record: record,
-                                onSuccess: { (response) in
-                                    
-                                    self.view.makeToast("记录添加成功！")
-                                    
-                                    self.weightTF?.text = ""
-                                    self.armlineTF?.text = ""
-                                    self.waistlineTF?.text = ""
-                                    self.bustTF?.text = ""
-                                    self.hiplineTF?.text = ""
-                                    self.thighlineTF?.text = ""
-                                    
-            },
-                                onFail: { (errMsg) in
-                                    self.view.makeToast(errMsg)
-            })
-            
-            
+//            record.weight = weightTF?.text ?? ""
+//            record.armline = armlineTF?.text ?? ""
+//            record.waistline = waistlineTF?.text ?? ""
+//            record.bust = bustTF?.text ?? ""
+//            record.hipline = hiplineTF?.text ?? ""
+//            record.thighline = thighlineTF?.text ?? ""
+//
+//            ServerAPI.addRecord(userID: "bhtrgormvbapu6it7880",
+//                                record: record,
+//                                onSuccess: { (response) in
+//
+//                                    self.view.makeToast("记录添加成功！")
+//
+//                                    self.weightTF?.text = ""
+//                                    self.armlineTF?.text = ""
+//                                    self.waistlineTF?.text = ""
+//                                    self.bustTF?.text = ""
+//                                    self.hiplineTF?.text = ""
+//                                    self.thighlineTF?.text = ""
+//
+//            },
+//                                onFail: { (errMsg) in
+//                                    self.view.makeToast(errMsg)
+//            })
+
+
         default:
             break
         }
     }
     
 }
+
+
+extension RecordController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.items.count + 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if indexPath.item < self.items.count {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "TextFieldTableCell", for: indexPath) as! TextFieldTableCell
+            let item = self.items[indexPath.item]
+            cell.titleLabel.text = item.title
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "SingleButtonTableCell", for: indexPath) as! SingleButtonTableCell
+            cell.dividerLine.isHidden = true
+            cell.button.setTitle("记录", for: UIControl.State.normal)
+            cell.button.tag = saveButtonTag
+            cell.button.addTarget(self, action: #selector(onBtnClick), for: UIControl.Event.touchUpInside)
+            return cell
+        }
+    }
+}
+
+extension RecordController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 48
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let item = self.items[indexPath.item]
+        //
+        //        let alertController = UIAlertController(title: item, message: "is in da house!", preferredStyle: .alert)
+        //        let action = UIAlertAction(title: "Ok", style: .default) { _ in }
+        //        alertController.addAction(action)
+        //        self.present(alertController, animated: true, completion: nil)
+        
+        let hitoryRecordController = HistoryRecordController()
+        hitoryRecordController.recordType = item.type
+        self.navigationController?.pushViewController(hitoryRecordController, animated: true)
+    }
+}
+
+extension RecordController: UITextFieldDelegate {
+    
+}
+
