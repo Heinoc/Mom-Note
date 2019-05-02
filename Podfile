@@ -14,7 +14,9 @@ target 'Mom-Note' do
   pod 'Alamofire', '~> 5.0.0.beta.1'
   
   # toast
-pod 'Toast-Swift', '~> 4.0.0'
+  pod 'Toast-Swift', '~> 4.0.0'
+  
+  pod 'MJRefresh'
 
 
   target 'Mom-NoteTests' do

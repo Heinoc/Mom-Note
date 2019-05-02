@@ -52,11 +52,11 @@ class ServerAPI {
     }
     
     class func getRecords(userID: String,
-                          pageNum: String,
-                          pageSize: String,
+                          pageNum: Int,
+                          pageSize: Int,
                           onSuccess: @escaping (_ response: Any) -> (),
                           onFail: @escaping (_ errMsg: String) -> ()) {
-        let params = [
+        let params: [String : Any] = [
             "userID": userID,
             "pageNum": pageNum,
             "pageSize": pageSize

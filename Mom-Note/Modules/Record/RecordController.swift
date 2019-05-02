@@ -30,7 +30,6 @@ class RecordController: BaseViewController {
     
     private func initView() {
         weak var weakSelf = self
-        let statusHeight = (self.navigationController?.navigationBar.frame.size.height)! + UIApplication.shared.statusBarFrame.size.height
         
         tableView = UITableView(frame: .zero, style: .plain)
         tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
@@ -75,32 +74,31 @@ class RecordController: BaseViewController {
     @objc func onBtnClick(sender: UIButton?) {
         switch sender?.tag {
         case saveButtonTag:
-            print("haha")
+            
             var record = Record()
-//            record.weight = weightTF?.text ?? ""
-//            record.armline = armlineTF?.text ?? ""
-//            record.waistline = waistlineTF?.text ?? ""
-//            record.bust = bustTF?.text ?? ""
-//            record.hipline = hiplineTF?.text ?? ""
-//            record.thighline = thighlineTF?.text ?? ""
-//
-//            ServerAPI.addRecord(userID: "bhtrgormvbapu6it7880",
-//                                record: record,
-//                                onSuccess: { (response) in
-//
-//                                    self.view.makeToast("记录添加成功！")
-//
-//                                    self.weightTF?.text = ""
-//                                    self.armlineTF?.text = ""
-//                                    self.waistlineTF?.text = ""
-//                                    self.bustTF?.text = ""
-//                                    self.hiplineTF?.text = ""
-//                                    self.thighlineTF?.text = ""
-//
-//            },
-//                                onFail: { (errMsg) in
-//                                    self.view.makeToast(errMsg)
-//            })
+            
+            for i in 0..<items.count {
+                let cell = self.tableView.cellForRow(at: IndexPath(item: i, section: 0)) as! TextFieldTableCell
+                
+                record.setItem(cell.inputTF.text!.description, by: items[i].type!)
+            }
+
+            ServerAPI.addRecord(userID: "bhtrgormvbapu6it7880",
+                                record: record,
+                                onSuccess: { (response) in
+                                    
+                                    for i in 0..<self.items.count {
+                                        let cell = self.tableView.cellForRow(at: IndexPath(item: i, section: 0)) as! TextFieldTableCell
+                                        cell.inputTF.text = ""
+                                        
+                                    }
+
+                                    self.view.makeToast("记录添加成功！")
+
+            },
+                                onFail: { (errMsg) in
+                                    self.view.makeToast(errMsg)
+            })
 
 
         default:
@@ -142,20 +140,17 @@ extension RecordController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let item = self.items[indexPath.item]
-        //
-        //        let alertController = UIAlertController(title: item, message: "is in da house!", preferredStyle: .alert)
-        //        let action = UIAlertAction(title: "Ok", style: .default) { _ in }
-        //        alertController.addAction(action)
-        //        self.present(alertController, animated: true, completion: nil)
         
-        let hitoryRecordController = HistoryRecordController()
-        hitoryRecordController.recordType = item.type
-        self.navigationController?.pushViewController(hitoryRecordController, animated: true)
+        
+//        let item = self.items[indexPath.item]
+//        //
+//        //        let alertController = UIAlertController(title: item, message: "is in da house!", preferredStyle: .alert)
+//        //        let action = UIAlertAction(title: "Ok", style: .default) { _ in }
+//        //        alertController.addAction(action)
+//        //        self.present(alertController, animated: true, completion: nil)
+//
+//        let hitoryRecordController = HistoryRecordController()
+//        hitoryRecordController.recordType = item.type
+//        self.navigationController?.pushViewController(hitoryRecordController, animated: true)
     }
 }
-
-extension RecordController: UITextFieldDelegate {
-    
-}
-

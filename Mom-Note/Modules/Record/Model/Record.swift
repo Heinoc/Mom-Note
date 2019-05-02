@@ -26,6 +26,24 @@ struct Record: Codable {
     var thighline: String?
     
     // 根据RecordType返回对应的记录
+    mutating func setItem(_ value: String, by type: RecordType) {
+        switch type {
+        case RecordType.WEIGHT:
+            self.weight = value
+        case RecordType.ARM_LINE:
+            self.armline = value
+        case RecordType.WAIST_LINE:
+            self.waistline = value
+        case RecordType.BUST:
+            self.bust = value
+        case RecordType.HIP_LINE:
+            self.hipline = value
+        case RecordType.THIGH_LINE:
+            self.thighline = value
+        }
+    }
+    
+    // 根据RecordType返回对应的记录
     func getItemValue(by: RecordType) -> String {
         switch by {
         case RecordType.WEIGHT:
@@ -43,13 +61,19 @@ struct Record: Codable {
         }
     }
     
-    enum RecordType {
-        case WEIGHT
-        case ARM_LINE
-        case WAIST_LINE
-        case BUST
-        case HIP_LINE
-        case THIGH_LINE
+    enum RecordType: String {
+        //    体重
+        case WEIGHT = "weight"
+        //    臂围
+        case ARM_LINE = "armline"
+        //    腰围
+        case WAIST_LINE = "waistline"
+        //    胸围
+        case BUST = "bust"
+        //    臀围
+        case HIP_LINE = "hipline"
+        //    大腿围
+        case THIGH_LINE = "thighline"
     }
     
 }

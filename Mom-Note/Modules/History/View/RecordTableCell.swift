@@ -45,7 +45,7 @@ class RecordTableCell: UITableViewCell {
         timeLabel.snp.makeConstraints { (maker) in
             maker.top.equalTo(weakSelf!.contentView)
             maker.bottom.equalTo(weakSelf!.contentView)
-            maker.left.equalTo(weakSelf!.contentView)
+            maker.left.equalTo(weakSelf!.contentView).offset(10)
             maker.width.equalTo(weakSelf!.contentView.snp.width).multipliedBy(0.5)
         }
 

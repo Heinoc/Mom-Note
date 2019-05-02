@@ -25,13 +25,13 @@
 		C516EF0421DC7302004DEAE2 /* icon_record@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C516EF0221DC7302004DEAE2 /* icon_record@2x.png */; };
 		C516EF0521DC7302004DEAE2 /* icon_record@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C516EF0321DC7302004DEAE2 /* icon_record@3x.png */; };
 		C516EF0721DC7A38004DEAE2 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C516EF0621DC7A38004DEAE2 /* BaseViewController.swift */; };
-        C54028442244C65F0030B2B2 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54028432244C65F0030B2B2 /* LoginController.swift */; };
-        C54028462244C6F90030B2B2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54028452244C6F90030B2B2 /* Constants.swift */; };
-        C54028482244D14E0030B2B2 /* PhoneLoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54028472244D14E0030B2B2 /* PhoneLoginController.swift */; };
-        C540284A2244DB8F0030B2B2 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54028492244DB8F0030B2B2 /* RegisterController.swift */; };
-        C540284D2244E2720030B2B2 /* UnderlineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C540284C2244E2720030B2B2 /* UnderlineTextField.swift */; };
 		C5355DD7223CEE0400F03CB1 /* TextFieldTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5355DD6223CEE0400F03CB1 /* TextFieldTableCell.swift */; };
 		C5355DD9223CF6BD00F03CB1 /* SingleButtonTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5355DD8223CF6BD00F03CB1 /* SingleButtonTableCell.swift */; };
+		C54028442244C65F0030B2B2 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54028432244C65F0030B2B2 /* LoginController.swift */; };
+		C54028462244C6F90030B2B2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54028452244C6F90030B2B2 /* Constants.swift */; };
+		C54028482244D14E0030B2B2 /* PhoneLoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54028472244D14E0030B2B2 /* PhoneLoginController.swift */; };
+		C540284A2244DB8F0030B2B2 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54028492244DB8F0030B2B2 /* RegisterController.swift */; };
+		C540284D2244E2720030B2B2 /* UnderlineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C540284C2244E2720030B2B2 /* UnderlineTextField.swift */; };
 		C56FA6D121E325D8000980CA /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56FA6D021E325D8000980CA /* UIColorExtension.swift */; };
 		C56FA6D921F85EC6000980CA /* HttpManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56FA6D821F85EC6000980CA /* HttpManager.swift */; };
 		C599D4DA21F865D900241880 /* ServerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C599D4D921F865D900241880 /* ServerAPI.swift */; };
@@ -90,13 +90,13 @@
 		C516EF0221DC7302004DEAE2 /* icon_record@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_record@2x.png"; sourceTree = "<group>"; };
 		C516EF0321DC7302004DEAE2 /* icon_record@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_record@3x.png"; sourceTree = "<group>"; };
 		C516EF0621DC7A38004DEAE2 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-        C54028432244C65F0030B2B2 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
-        C54028452244C6F90030B2B2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-        C54028472244D14E0030B2B2 /* PhoneLoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneLoginController.swift; sourceTree = "<group>"; };
-        C54028492244DB8F0030B2B2 /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
-        C540284C2244E2720030B2B2 /* UnderlineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlineTextField.swift; sourceTree = "<group>"; };
 		C5355DD6223CEE0400F03CB1 /* TextFieldTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldTableCell.swift; sourceTree = "<group>"; };
 		C5355DD8223CF6BD00F03CB1 /* SingleButtonTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleButtonTableCell.swift; sourceTree = "<group>"; };
+		C54028432244C65F0030B2B2 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		C54028452244C6F90030B2B2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C54028472244D14E0030B2B2 /* PhoneLoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneLoginController.swift; sourceTree = "<group>"; };
+		C54028492244DB8F0030B2B2 /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
+		C540284C2244E2720030B2B2 /* UnderlineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlineTextField.swift; sourceTree = "<group>"; };
 		C56FA6D021E325D8000980CA /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		C56FA6D821F85EC6000980CA /* HttpManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpManager.swift; sourceTree = "<group>"; };
 		C599D4D921F865D900241880 /* ServerAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerAPI.swift; sourceTree = "<group>"; };
@@ -262,7 +262,7 @@
 		C516EEF321CCBF06004DEAE2 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-                C54028422244C6470030B2B2 /* Login */,
+				C54028422244C6470030B2B2 /* Login */,
 				C504B5E3221293530046CCB7 /* User */,
 				C516EEF921DC6822004DEAE2 /* Record */,
 				C516EEFA21DC6829004DEAE2 /* History */,
@@ -331,24 +331,24 @@
 			path = NavigationBar;
 			sourceTree = "<group>";
 		};
-        C54028422244C6470030B2B2 /* Login */ = {
-            isa = PBXGroup;
-            children = (
-                C54028432244C65F0030B2B2 /* LoginController.swift */,
-                C54028472244D14E0030B2B2 /* PhoneLoginController.swift */,
-                C54028492244DB8F0030B2B2 /* RegisterController.swift */,
-            );
-            path = Login;
-            sourceTree = "<group>";
-        };
 		C5355DD5223CEDC600F03CB1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-                C540284C2244E2720030B2B2 /* UnderlineTextField.swift */,
+				C540284C2244E2720030B2B2 /* UnderlineTextField.swift */,
 				C5355DD6223CEE0400F03CB1 /* TextFieldTableCell.swift */,
 				C5355DD8223CF6BD00F03CB1 /* SingleButtonTableCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		C54028422244C6470030B2B2 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				C54028432244C65F0030B2B2 /* LoginController.swift */,
+				C54028472244D14E0030B2B2 /* PhoneLoginController.swift */,
+				C54028492244DB8F0030B2B2 /* RegisterController.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		C56FA6CF21E325B8000980CA /* Extension */ = {
@@ -381,7 +381,7 @@
 			isa = PBXGroup;
 			children = (
 				C599D4DC21F869A500241880 /* URLConstants.swift */,
-                C54028452244C6F90030B2B2 /* Constants.swift */,
+				C54028452244C6F90030B2B2 /* Constants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -523,15 +523,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-Mom-NoteTests-checkManifestLockResult.txt",
 			);
@@ -545,15 +541,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-Mom-Note-checkManifestLockResult.txt",
 			);
@@ -567,21 +559,19 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Mom-Note/Pods-Mom-Note-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/ESTabBarController-swift/ESTabBarController_swift.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ESTabBarController_swift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
 			);
@@ -595,15 +585,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-Mom-NoteUITests-checkManifestLockResult.txt",
 			);
@@ -618,14 +604,14 @@
 		C516EEBE21CCBE7A004DEAE2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
-            files = (
-                C54028442244C65F0030B2B2 /* LoginController.swift in Sources */,
-                C54028462244C6F90030B2B2 /* Constants.swift in Sources */,
+			files = (
+				C54028442244C65F0030B2B2 /* LoginController.swift in Sources */,
+				C54028462244C6F90030B2B2 /* Constants.swift in Sources */,
 				C5355DD7223CEE0400F03CB1 /* TextFieldTableCell.swift in Sources */,
 				C504B5E6221293690046CCB7 /* User.swift in Sources */,
 				C516EEFC21DC6851004DEAE2 /* HistoryController.swift in Sources */,
-                C540284D2244E2720030B2B2 /* UnderlineTextField.swift in Sources */,
-                C54028482244D14E0030B2B2 /* PhoneLoginController.swift in Sources */,
+				C540284D2244E2720030B2B2 /* UnderlineTextField.swift in Sources */,
+				C54028482244D14E0030B2B2 /* PhoneLoginController.swift in Sources */,
 				C599D4DD21F869A500241880 /* URLConstants.swift in Sources */,
 				C504B5EC2212D1810046CCB7 /* RecordTableCell.swift in Sources */,
 				C56FA6D121E325D8000980CA /* UIColorExtension.swift in Sources */,
@@ -639,7 +625,7 @@
 				C516EEC621CCBE7A004DEAE2 /* AppDelegate.swift in Sources */,
 				C516EF0721DC7A38004DEAE2 /* BaseViewController.swift in Sources */,
 				C599D4DA21F865D900241880 /* ServerAPI.swift in Sources */,
-                C540284A2244DB8F0030B2B2 /* RegisterController.swift in Sources */,
+				C540284A2244DB8F0030B2B2 /* RegisterController.swift in Sources */,
 				C5BBAF7C2227D1820059D28B /* HistoryRecordController.swift in Sources */,
 				C504B5E92212CA570046CCB7 /* RecordHistoryResponse.swift in Sources */,
 				C56FA6D921F85EC6000980CA /* HttpManager.swift in Sources */,

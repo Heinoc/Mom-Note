@@ -9,6 +9,7 @@
 import UIKit
 
 import Toast_Swift
+import MJRefresh
 
 class HistoryRecordController: BaseViewController {
     
@@ -20,8 +21,15 @@ class HistoryRecordController: BaseViewController {
     var dividerLineView: UIView!
     
     var tableView: UITableView!
+    // 顶部刷新
+    let header = MJRefreshNormalHeader()
+    // 底部刷新
+    let footer = MJRefreshAutoNormalFooter()
     
     var items: [Record] = []
+    
+    var pageNum = 1
+    var pageSize = 20
 //    
 //    init(recordType: Record.RecordType) {
 //        self.recordType = recordType
@@ -98,17 +106,52 @@ class HistoryRecordController: BaseViewController {
         self.tableView.dataSource = self
         self.tableView.delegate = self
         
-        loadData()
+        // 下拉刷新
+        header.setRefreshingTarget(self, refreshingAction: #selector(refresh))
+        // 现在的版本要用mj_header
+        self.tableView.mj_header = header
         
+        // 上拉刷新
+        footer.setRefreshingTarget(self, refreshingAction: #selector(loadMore))
+        self.tableView.mj_footer = footer
+        
+        self.tableView.mj_header.beginRefreshing()
+        
+    }
+    
+    @objc func refresh() {
+        pageNum = 1
+        loadData()
+    }
+    
+    @objc func loadMore() {
+        pageNum += 1
+        loadData()
     }
     
     func loadData() {
         
         ServerAPI.getRecords(userID: "bhtrgormvbapu6it7880",
-                             pageNum: "1",
-                             pageSize: "20",
+                             pageNum: pageNum,
+                             pageSize: pageSize,
                              onSuccess: { (response) in
-                                self.items = (response as! RecordHistoryResponse).list!
+                                
+                                let list = (response as! RecordHistoryResponse).list!
+                                
+                                if self.pageNum == 1 {
+                                    self.items = list
+                                    
+                                    self.tableView.mj_header.endRefreshing()
+                                    self.tableView.mj_footer.resetNoMoreData()
+                                } else {
+                                    self.items += list
+                                    
+                                    self.tableView.mj_footer.endRefreshing()
+                                }
+                                
+                                if list.count < self.pageSize {
+                                    self.tableView.mj_footer.endRefreshingWithNoMoreData()
+                                }
                                 
                                 self.tableView.reloadData()
                                 
